@@ -95,6 +95,14 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
       - run: node scripts/build_web.mjs
+      - name: The single-file build must be self-contained
+        run: |
+          test -f web/dist/dashgps-standalone.html
+          if grep -qE '<script[^>]+src=|<link[^>]+stylesheet[^>]+href="\./' \
+              web/dist/dashgps-standalone.html; then
+            echo "standalone build still references an external file"; exit 1
+          fi
+          echo "standalone build is one file"
       - name: The deployed bundle must not import node builtins
         run: |
           if grep -rn "node:" web/dist/lib web/dist/*.js; then

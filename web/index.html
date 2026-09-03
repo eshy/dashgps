@@ -3,147 +3,145 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>dashgps — extract GPS from dashcam video</title>
-<meta name="description" content="Pull the GPS track out of dashcam video files and export CSV, GPX or GeoJSON. Runs entirely in your browser — nothing is uploaded.">
+<title>dashgps</title>
+<meta name="description" content="Pull the GPS track out of dashcam video and export CSV, GPX or GeoJSON. Runs entirely in your browser — nothing is uploaded.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%9B%B0%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 <div class="wrap">
 
-<header>
-  <h1>dashgps</h1>
-  <p class="lede">
-    Pull the GPS track out of dashcam video and export it as CSV, GPX or GeoJSON.
-    Drop in a single clip or a whole trip's folder.
-  </p>
-  <p class="repo">
+<header class="masthead">
+  <h1>dash<b>gps</b></h1>
+  <p class="lede">Pull the GPS track out of dashcam video and export it as CSV, GPX or GeoJSON.</p>
+  <p class="meta">
     v<span id="version">0.1.0</span> ·
-    <a href="https://github.com/dashgps/dashgps">source and command-line tool on GitHub</a>
+    <a href="https://github.com/dashgps/dashgps">source &amp; CLI</a>
   </p>
 </header>
+
+<dl class="readout" id="readout">
+  <div><dt>Files</dt><dd id="r-files">0<small> / 0</small></dd></div>
+  <div><dt>With GPS</dt><dd id="r-ok">0</dd></div>
+  <div><dt>Points</dt><dd id="r-points">0</dd></div>
+  <div><dt>Bytes read</dt><dd id="r-io">0 B</dd></div>
+  <div><dt>Track</dt><dd id="r-km">0.0<small> km</small></dd></div>
+  <div><dt>Flagged</dt><dd id="r-flagged">0</dd></div>
+  <div class="bar"><i id="bar"></i></div>
+</dl>
 
 <div class="drop" id="drop">
   <div class="buttons">
     <button id="pickFiles" class="primary" type="button">Choose files</button>
     <button id="pickFolder" type="button">Choose a folder</button>
-    <button id="sample" type="button">Try a sample file</button>
+    <button id="sample" type="button">Load the sample again</button>
   </div>
-  <p class="hint">…or drag files and folders anywhere onto this box.</p>
+  <p class="hint">…or drag files and folders anywhere onto this box. <code>.ts</code> <code>.mp4</code> <code>.mov</code></p>
   <input id="files" type="file" multiple accept=".ts,.mp4,.mov,.m2ts,.mts" class="hidden">
   <input id="folder" type="file" multiple webkitdirectory class="hidden">
   <p class="privacy">
     <strong>Your video never leaves this device.</strong>
-    Parsing happens in your browser, and for the common format only the last few kilobytes of each
-    file are read — so a folder of 1&nbsp;GB clips is done in seconds.
+    Parsing happens in your browser, and for the common format only the last 64&nbsp;KB of each file
+    is read — so a folder of 1&nbsp;GB clips finishes in seconds.
   </p>
 </div>
 
-<div id="progress" class="hidden">
-  <div class="progress"><i id="bar"></i></div>
-  <div class="counts" id="counts" aria-live="polite"></div>
+<div class="notice hidden" id="sampleNote">
+  <span>Showing a synthetic sample track so you can see the output. Drop your own clips to replace it.</span>
+  <button id="dismissSample" type="button">Clear</button>
 </div>
 
-<div id="results" class="hidden">
-  <h2>Files</h2>
-  <div class="tablebox">
-    <table>
-      <thead><tr>
-        <th>File</th><th style="text-align:right">Size</th><th>Format</th>
-        <th style="text-align:right">Points</th><th>First fix / error</th>
-      </tr></thead>
-      <tbody id="rows"></tbody>
-    </table>
-  </div>
-</div>
+<div class="split" id="outputs">
+  <section class="panel">
+    <h2>Files <span id="filesNote"></span></h2>
+    <div class="tablebox">
+      <table>
+        <thead><tr>
+          <th>File</th><th class="num">Size</th><th>Format</th>
+          <th class="num">Points</th><th>First fix</th>
+        </tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
 
-<div id="outputs" class="hidden">
-  <h2>Track</h2>
-  <div class="mapwrap">
+  <section class="panel">
+    <h2>Track <span id="trackNote"></span></h2>
     <canvas id="map" tabindex="0" role="img"
             aria-label="Map of the extracted GPS track. Drag to pan, scroll or +/- to zoom."></canvas>
     <div class="maptools">
       <label class="check"><input type="checkbox" id="tiles"> Basemap tiles</label>
-      <button id="fit" type="button">Fit to track</button>
+      <button id="fit" type="button">Fit</button>
       <span class="legend" id="legend"></span>
     </div>
-  </div>
-  <p class="privacy" style="margin-top:8px">
-    Basemap tiles are the only thing on this page that talks to a server. Leaving the box unticked
-    keeps everything, including the region you drove in, on this device.
-  </p>
+  </section>
+</div>
 
+<div class="panel" id="exportPanel">
   <h2>Export</h2>
-  <div class="panel">
-    <div class="row">
-      <label class="check"><input type="checkbox" id="f_csv" checked> CSV</label>
-      <label class="check"><input type="checkbox" id="f_gpx" checked> GPX</label>
-      <label class="check"><input type="checkbox" id="f_geojson"> GeoJSON</label>
-      <label class="check"><input type="checkbox" id="f_summary" checked> Summary JSON</label>
-      <span style="flex:1"></span>
-      <label class="check">One file per
-        <select id="group">
-          <option value="day" selected>day</option>
-          <option value="file">source clip</option>
-          <option value="none">everything together</option>
-        </select>
-      </label>
-      <button id="download" class="primary" type="button">Download</button>
-      <button id="clear" type="button">Clear</button>
-    </div>
-    <details>
-      <summary>Advanced</summary>
-      <div class="adv">
-        <label>Camera's UTC offset
-          <input id="tz" type="text" placeholder="e.g. -07:00" inputmode="text">
-        </label>
-        <label>Max plausible speed (km/h)
-          <input id="maxspeed" type="number" value="400" min="50" step="10">
-        </label>
-        <label>Recording gap (s)
-          <input id="maxgap" type="number" value="600" min="10" step="10">
-        </label>
-        <label>Min points per run
-          <input id="minrun" type="number" value="60" min="2" step="1">
-        </label>
-        <label>Distance sampling (s)
-          <input id="decimate" type="number" value="5" min="1" step="1">
-        </label>
-        <label class="check" style="align-self:end">
-          <input type="checkbox" id="glitch"> Include flagged glitches
-        </label>
-        <label class="check" style="align-self:end">
-          <input type="checkbox" id="gjpoints" checked> GeoJSON point features
-        </label>
-        <label class="check" style="align-self:end">
-          <input type="checkbox" id="deep" checked> Deep scan for unknown formats
-        </label>
-      </div>
-      <p class="privacy" style="margin-top:10px">
-        Timestamps come from the camera's own clock and carry no timezone. Setting the offset the
-        camera was set to makes the exported times real UTC.
-      </p>
-    </details>
+  <div class="exportbar">
+    <label class="check"><input type="checkbox" id="f_csv" checked> CSV</label>
+    <label class="check"><input type="checkbox" id="f_gpx" checked> GPX</label>
+    <label class="check"><input type="checkbox" id="f_geojson"> GeoJSON</label>
+    <label class="check"><input type="checkbox" id="f_summary" checked> Summary</label>
+    <span style="flex:1"></span>
+    <label class="check">One file per
+      <select id="group">
+        <option value="day" selected>day</option>
+        <option value="file">source clip</option>
+        <option value="none">everything together</option>
+      </select>
+    </label>
+    <button id="download" class="primary" type="button">Download</button>
+    <button id="clear" type="button">Clear</button>
   </div>
+  <details>
+    <summary>Advanced</summary>
+    <div class="adv">
+      <label>Camera's UTC offset
+        <input id="tz" type="text" placeholder="-07:00">
+      </label>
+      <label>Max plausible speed (km/h)
+        <input id="maxspeed" type="number" value="400" min="50" step="10">
+      </label>
+      <label>Recording gap (s)
+        <input id="maxgap" type="number" value="600" min="10" step="10">
+      </label>
+      <label>Min points per run
+        <input id="minrun" type="number" value="60" min="2" step="1">
+      </label>
+      <label>Distance sampling (s)
+        <input id="decimate" type="number" value="5" min="1" step="1">
+      </label>
+      <label class="check"><input type="checkbox" id="glitch"> Include flagged glitches</label>
+      <label class="check"><input type="checkbox" id="gjpoints" checked> GeoJSON point features</label>
+      <label class="check"><input type="checkbox" id="deep" checked> Deep scan for unknown formats</label>
+    </div>
+  </details>
 </div>
 
 <p class="status" id="status" aria-live="polite"></p>
 
 <footer>
   <p>
-    <strong>Supported formats.</strong> LigoGPS trailers in <code>.ts</code> files
-    (verified against ~1,230 real clips from an ICESKY dashcam), LigoGPS blocks in MP4 atoms,
-    Viidure/INNOVV text records, and generic NMEA 0183. Formats marked
-    <em>untested</em> were built from a published sample or a public standard and have never seen a
-    file from that camera — if you own one,
-    <a href="https://github.com/dashgps/dashgps/issues/new?template=new-format.yml">send us a
-    diagnostic</a> and we will make it work.
+    <strong>Supported formats.</strong> LigoGPS trailers in <code>.ts</code> files — verified
+    against ~1,230 real clips from an ICESKY dashcam — plus LigoGPS blocks in MP4 atoms,
+    Viidure/INNOVV records, and generic NMEA 0183. Formats marked <em>untested</em> were built from
+    a published sample or a public standard and have never seen a file from that camera. If you own
+    one, <a href="https://github.com/dashgps/dashgps/issues/new?template=new-format.yml">send a
+    redacted diagnostic</a> and we will make it work.
   </p>
   <p>
-    dashgps is MIT licensed and has no runtime dependencies. It does not replace
-    <a href="https://exiftool.org/">ExifTool</a>, which reads far more formats; the command-line
-    tool can hand unknown files to your own ExifTool install.
-    © <span id="year"></span> dashgps contributors.
+    Basemap tiles are the only thing on this page that talks to a server; leaving that box unticked
+    keeps the region you drove in on this device too.
+    Want it offline? <a href="./dashgps-standalone.html" download>Download this page as a single
+    HTML file</a> — the whole tool, no server, no install, works with no network at all.
+    dashgps is MIT licensed with no runtime dependencies. It does not replace
+    <a href="https://exiftool.org/">ExifTool</a>, which reads far more formats — the command-line
+    tool can hand unknown files to your own install.
   </p>
 </footer>
 

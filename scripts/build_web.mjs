@@ -39,4 +39,7 @@ writeFileSync(join(DIST, "index.html"), html);
 // GitHub Pages strips underscore-prefixed paths without this.
 writeFileSync(join(DIST, ".nojekyll"), "");
 
+// The single-file build ships alongside the site: one file you can save and use offline.
+execSync("node " + JSON.stringify(join(ROOT, "scripts", "build_single.mjs")), { stdio: "inherit" });
+
 console.log("built web/dist at " + sha);

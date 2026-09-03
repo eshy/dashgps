@@ -10,6 +10,9 @@ pip install dashgps          # command line, no dependencies
 npm install -g dashgps       # same thing, if you prefer Node
 ```
 
+There is also a **single-file build** — `dashgps-standalone.html`, the whole tool in one 184 KB
+file. Save it and it works offline, forever, with no server and no install.
+
 ```console
 $ dashgps ~/Dashcam/Trip -r -o tracks/
 [1/1230] 20260803_095418_F.ts  ligo.ts_trailer  157 points

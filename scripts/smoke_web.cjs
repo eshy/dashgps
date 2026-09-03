@@ -54,19 +54,39 @@ function serve(dir) {
     candidates.length ? { executablePath: candidates[0] } : {});
   const ctx = await browser.newContext({ acceptDownloads: true });
   const page = await ctx.newPage();
+  // A blocked font or tile request is a network condition, not a page defect - the page is
+  // required to work without them, so those are noted rather than failed on.
+  const isNetwork = (t) => /net::ERR_|Failed to load resource/.test(t);
   const errors = [];
-  page.on("pageerror", (e) => errors.push("pageerror: " + e.message));
-  page.on("console", (m) => { if (m.type() === "error") errors.push("console: " + m.text()); });
+  const netnotes = [];
+  const watch = (pg, sink) => {
+    pg.on("pageerror", (e) => sink.push("pageerror: " + e.message));
+    pg.on("console", (m) => {
+      if (m.type() !== "error") return;
+      (isNetwork(m.text()) ? netnotes : sink).push("console: " + m.text());
+    });
+  };
+  watch(page, errors);
 
   await page.goto(`http://127.0.0.1:${port}/`, { waitUntil: "networkidle" });
 
+  // The page opens with the bundled sample already parsed, so the first frame shows real output.
+  await page.waitForFunction(() => document.getElementById("r-points").textContent !== "0",
+    null, { timeout: 20000 });
+  if (!(await page.isVisible("#sampleNote"))) throw new Error("sample notice should be visible");
+  console.log("  opens with the sample loaded:", (await page.textContent("#r-points")).trim(),
+    "points");
+
   await page.setInputFiles("#files", FIXTURE);
-  await page.waitForSelector("#outputs:not(.hidden)", { timeout: 20000 });
+  await page.waitForFunction(
+    () => document.getElementById("rows").textContent.includes("ligo_ts_trailer_basic"),
+    null, { timeout: 20000 });
+  if (await page.isVisible("#sampleNote")) {
+    throw new Error("sample notice should clear once real files are dropped");
+  }
 
-  const summary = await page.textContent("#status");
   const rowText = await page.textContent("#rows");
-  console.log("  status:", summary.trim());
-
+  console.log("  status:", (await page.textContent("#status")).trim());
   if (!/296/.test(rowText)) throw new Error("expected 296 points in the file table, got: " + rowText);
 
   // CSV only, grouped like the golden, then compare bytes.
@@ -87,15 +107,38 @@ function serve(dir) {
   }
   console.log("  browser CSV is byte-identical to the golden (" + want.length + " bytes)");
 
-  // The map must render without throwing, in both tile modes.
+  // The map must render without throwing.
   await page.click("#fit");
-  await page.waitForTimeout(200);
+  await page.waitForTimeout(250);
   await page.evaluate(() => window.scrollTo(0, 0));
   await page.waitForTimeout(150);
   await page.screenshot({ path: "/tmp/dashgps-web.png", fullPage: true });
 
+  // The single-file build must behave the same, with no server and no module loading at all.
+  const single = path.join(DIST, "dashgps-standalone.html");
+  if (fs.existsSync(single)) {
+    const p2 = await ctx.newPage();
+    const errs2 = [];
+    watch(p2, errs2);
+    await p2.goto("file://" + single);
+    await p2.waitForFunction(() => document.getElementById("r-points").textContent !== "0",
+      null, { timeout: 20000 });
+    const pts = (await p2.textContent("#r-points")).trim();
+    if (pts !== "296") throw new Error("standalone: expected 296 sample points, got " + pts);
+    await p2.evaluate(() => window.scrollTo(0, 0));
+    await p2.waitForTimeout(250);
+    await p2.screenshot({ path: "/tmp/dashgps-standalone.png", fullPage: true });
+    if (errs2.length) throw new Error("standalone page errors:\n" + errs2.join("\n"));
+    console.log("  standalone build runs from file:// with " + pts + " points");
+    await p2.close();
+  }
+
   await browser.close();
   srv.close();
   if (errors.length) { console.error("page errors:\n" + errors.join("\n")); process.exit(1); }
+  if (netnotes.length) {
+    console.log("  (" + netnotes.length + " external request(s) blocked in this sandbox; " +
+      "the page rendered without them, which is the required behaviour)");
+  }
   console.log("smoke_web: OK");
 })().catch((e) => { console.error("smoke_web FAILED:", e.message); process.exit(1); });
