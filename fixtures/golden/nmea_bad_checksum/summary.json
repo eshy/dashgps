@@ -1,0 +1,42 @@
+{
+  "generator": "dashgps 0.1.0",
+  "time_is_naive": false,
+  "files": [
+    {
+      "name": "nmea_bad_checksum.ts",
+      "size": 12784,
+      "format": "nmea",
+      "status": "untested",
+      "records": 24,
+      "points": 24,
+      "dropped_nofix": 0,
+      "t_start": "2026-05-03T10:00:00",
+      "t_end": "2026-05-03T10:00:28",
+      "bbox": [-122.306923, 47.599407, -122.300237, 47.599970],
+      "warnings": ["6 NMEA sentences failed their checksum and were ignored"],
+      "error": null
+    }
+  ],
+  "groups": [
+    {
+      "label": "all",
+      "points": 24,
+      "outlier_points": 0,
+      "dropped_duplicate_times": 0,
+      "runs": 1,
+      "glitch_runs": 0,
+      "distance_km": 0.506,
+      "duration_s": 28.000,
+      "start": "2026-05-03T10:00:00",
+      "end": "2026-05-03T10:00:28",
+      "sources": ["nmea_bad_checksum.ts"]
+    }
+  ],
+  "totals": {
+    "files": 1,
+    "files_parsed": 1,
+    "groups": 1,
+    "points": 24,
+    "distance_km": 0.506
+  }
+}

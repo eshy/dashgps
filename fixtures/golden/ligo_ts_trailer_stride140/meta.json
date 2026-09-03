@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "file": "ligo_ts_trailer_stride140.ts",
+      "format": "ligo.ts_trailer",
+      "status": "verified",
+      "meta": {
+        "end_magic": "####",
+        "trailer_len": 16836,
+        "blocks": 1,
+        "variant": 9,
+        "count_field": 120,
+        "stride": 140,
+        "records": 120
+      },
+      "warnings": [],
+      "error": null,
+      "read_ranges": [
+        [
+          0,
+          28868
+        ]
+      ],
+      "bytes_read": 28868,
+      "file_size": 28868
+    }
+  ]
+}

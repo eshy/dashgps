@@ -1,0 +1,20 @@
+{
+  "id": "ligo_plain_ts_stream",
+  "spec": "02-ligogps-plaintext",
+  "builder": "ligo_ts_stream",
+  "output": "ligo_plain_ts_stream.ts",
+  "expect": {
+    "format": "ligo.plain",
+    "points": 35,
+    "stride": 140
+  },
+  "params": {
+    "seed": 42,
+    "stride": 140,
+    "track": {
+      "start": "2026/08/16 09:00:00",
+      "n": 35,
+      "nofix_prefix": 0
+    }
+  }
+}

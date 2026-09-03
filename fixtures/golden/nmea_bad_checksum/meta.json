@@ -1,0 +1,65 @@
+{
+  "files": [
+    {
+      "file": "nmea_bad_checksum.ts",
+      "format": "nmea",
+      "status": "untested",
+      "meta": {
+        "sentences": 54,
+        "checksum_rejects": 6
+      },
+      "warnings": [
+        "6 NMEA sentences failed their checksum and were ignored"
+      ],
+      "error": null,
+      "read_ranges": [
+        [
+          0,
+          12784
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          12784
+        ],
+        [
+          0,
+          12784
+        ],
+        [
+          0,
+          12784
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          12784
+        ],
+        [
+          0,
+          12784
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          12784
+        ],
+        [
+          0,
+          12784
+        ]
+      ],
+      "bytes_read": 102320,
+      "file_size": 12784
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "nmea_rmc_gga",
+  "spec": "04-nmea",
+  "builder": "nmea_ts",
+  "output": "nmea_rmc_gga.ts",
+  "expect": {
+    "format": "nmea",
+    "points": 50
+  },
+  "params": {
+    "seed": 60,
+    "sentences_per_pes": 4,
+    "track": {
+      "start": "2026/05/01 10:00:00",
+      "n": 50,
+      "nofix_prefix": 0,
+      "lat0": 47.6,
+      "lon0": -122.3,
+      "speed_kmh": 65.0
+    }
+  }
+}

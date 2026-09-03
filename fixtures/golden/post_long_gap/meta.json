@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "file": "post_long_gap.ts",
+      "format": "ligo.ts_trailer",
+      "status": "verified",
+      "meta": {
+        "end_magic": "####",
+        "trailer_len": 21036,
+        "blocks": 1,
+        "variant": 9,
+        "count_field": 150,
+        "stride": 140,
+        "records": 150
+      },
+      "warnings": [],
+      "error": null,
+      "read_ranges": [
+        [
+          0,
+          33068
+        ]
+      ],
+      "bytes_read": 33068,
+      "file_size": 33068
+    }
+  ]
+}

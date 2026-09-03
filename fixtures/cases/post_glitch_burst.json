@@ -1,0 +1,24 @@
+{
+  "id": "post_glitch_burst",
+  "spec": "20-postprocess",
+  "builder": "ligo_ts_trailer",
+  "output": "post_glitch_burst.ts",
+  "expect": {
+    "format": "ligo.ts_trailer",
+    "points": 200,
+    "outliers": 12
+  },
+  "params": {
+    "seed": 30,
+    "stride": 140,
+    "track": {
+      "start": "2026/08/19 11:00:00",
+      "n": 200,
+      "nofix_prefix": 0,
+      "glitch_at": 100,
+      "glitch_n": 12,
+      "glitch_dlat": -0.9,
+      "glitch_dlon": -1.4
+    }
+  }
+}

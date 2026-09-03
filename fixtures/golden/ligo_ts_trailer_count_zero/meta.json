@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "file": "ligo_ts_trailer_count_zero.ts",
+      "format": "ligo.ts_trailer",
+      "status": "verified",
+      "meta": {
+        "end_magic": "####",
+        "trailer_len": 4236,
+        "blocks": 1,
+        "variant": 9,
+        "count_field": 0,
+        "stride": 140,
+        "records": 30
+      },
+      "warnings": [],
+      "error": null,
+      "read_ranges": [
+        [
+          0,
+          16268
+        ]
+      ],
+      "bytes_read": 16268,
+      "file_size": 16268
+    }
+  ]
+}

@@ -1,0 +1,416 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "group": "all",
+    "generator": "dashgps 0.1.0",
+    "time_is_naive": true
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "run": 0,
+        "points": 30,
+        "distance_km": 0.387,
+        "outlier": false,
+        "start": "2026-08-08T04:00:00",
+        "end": "2026-08-08T04:00:29"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-80.137971, 25.774408, -10.0],
+          [-80.138102, 25.774386, -9.0],
+          [-80.138233, 25.774364, -8.0],
+          [-80.138364, 25.774344, -7.0],
+          [-80.138495, 25.774323, -6.0],
+          [-80.138626, 25.774304, -10.0],
+          [-80.138758, 25.774284, -9.0],
+          [-80.138889, 25.774265, -8.0],
+          [-80.139021, 25.774247, -7.0],
+          [-80.139153, 25.774230, -6.0],
+          [-80.139284, 25.774212, -10.0],
+          [-80.139416, 25.774196, -9.0],
+          [-80.139548, 25.774179, -8.0],
+          [-80.139680, 25.774164, -7.0],
+          [-80.139812, 25.774149, -6.0],
+          [-80.139945, 25.774134, -10.0],
+          [-80.140077, 25.774120, -9.0],
+          [-80.140209, 25.774106, -8.0],
+          [-80.140341, 25.774093, -7.0],
+          [-80.140474, 25.774081, -6.0],
+          [-80.140606, 25.774069, -10.0],
+          [-80.140739, 25.774057, -9.0],
+          [-80.140872, 25.774046, -8.0],
+          [-80.141004, 25.774036, -7.0],
+          [-80.141137, 25.774026, -6.0],
+          [-80.141270, 25.774017, -10.0],
+          [-80.141402, 25.774008, -9.0],
+          [-80.141535, 25.773999, -8.0],
+          [-80.141668, 25.773991, -7.0],
+          [-80.141801, 25.773984, -6.0]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:00",
+        "speed_kmh": 48.00,
+        "heading_deg": 259.2,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.137971, 25.774408, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:01",
+        "speed_kmh": 48.00,
+        "heading_deg": 259.5,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.138102, 25.774386, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:02",
+        "speed_kmh": 48.00,
+        "heading_deg": 259.8,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.138233, 25.774364, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:03",
+        "speed_kmh": 48.00,
+        "heading_deg": 260.0,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.138364, 25.774344, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:04",
+        "speed_kmh": 48.00,
+        "heading_deg": 260.2,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.138495, 25.774323, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:05",
+        "speed_kmh": 48.00,
+        "heading_deg": 260.5,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.138626, 25.774304, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:06",
+        "speed_kmh": 48.00,
+        "heading_deg": 260.8,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.138758, 25.774284, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:07",
+        "speed_kmh": 48.00,
+        "heading_deg": 261.0,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.138889, 25.774265, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:08",
+        "speed_kmh": 48.00,
+        "heading_deg": 261.2,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.139021, 25.774247, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:09",
+        "speed_kmh": 48.00,
+        "heading_deg": 261.5,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.139153, 25.774230, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:10",
+        "speed_kmh": 48.00,
+        "heading_deg": 261.8,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.139284, 25.774212, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:11",
+        "speed_kmh": 48.00,
+        "heading_deg": 262.0,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.139416, 25.774196, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:12",
+        "speed_kmh": 48.00,
+        "heading_deg": 262.2,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.139548, 25.774179, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:13",
+        "speed_kmh": 48.00,
+        "heading_deg": 262.5,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.139680, 25.774164, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:14",
+        "speed_kmh": 48.00,
+        "heading_deg": 262.8,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.139812, 25.774149, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:15",
+        "speed_kmh": 48.00,
+        "heading_deg": 263.0,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.139945, 25.774134, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:16",
+        "speed_kmh": 48.00,
+        "heading_deg": 263.2,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.140077, 25.774120, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:17",
+        "speed_kmh": 48.00,
+        "heading_deg": 263.5,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.140209, 25.774106, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:18",
+        "speed_kmh": 48.00,
+        "heading_deg": 263.8,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.140341, 25.774093, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:19",
+        "speed_kmh": 48.00,
+        "heading_deg": 264.0,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.140474, 25.774081, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:20",
+        "speed_kmh": 48.00,
+        "heading_deg": 264.2,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.140606, 25.774069, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:21",
+        "speed_kmh": 48.00,
+        "heading_deg": 264.5,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.140739, 25.774057, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:22",
+        "speed_kmh": 48.00,
+        "heading_deg": 264.8,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.140872, 25.774046, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:23",
+        "speed_kmh": 48.00,
+        "heading_deg": 265.0,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.141004, 25.774036, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:24",
+        "speed_kmh": 48.00,
+        "heading_deg": 265.2,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.141137, 25.774026, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:25",
+        "speed_kmh": 48.00,
+        "heading_deg": 265.5,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.141270, 25.774017, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:26",
+        "speed_kmh": 48.00,
+        "heading_deg": 265.8,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.141402, 25.774008, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:27",
+        "speed_kmh": 48.00,
+        "heading_deg": 266.0,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.141535, 25.773999, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:28",
+        "speed_kmh": 48.00,
+        "heading_deg": 266.2,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.141668, 25.773991, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-08T04:00:29",
+        "speed_kmh": 48.00,
+        "heading_deg": 266.5,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.141801, 25.773984, -6.0] }
+    }
+  ]
+}

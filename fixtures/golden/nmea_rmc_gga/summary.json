@@ -1,0 +1,42 @@
+{
+  "generator": "dashgps 0.1.0",
+  "time_is_naive": false,
+  "files": [
+    {
+      "name": "nmea_rmc_gga.ts",
+      "size": 20304,
+      "format": "nmea",
+      "status": "untested",
+      "records": 50,
+      "points": 50,
+      "dropped_nofix": 0,
+      "t_start": "2026-05-01T10:00:00",
+      "t_end": "2026-05-01T10:00:49",
+      "bbox": [-122.311977, 47.599332, -122.300237, 47.599970],
+      "warnings": [],
+      "error": null
+    }
+  ],
+  "groups": [
+    {
+      "label": "all",
+      "points": 50,
+      "outlier_points": 0,
+      "dropped_duplicate_times": 0,
+      "runs": 1,
+      "glitch_runs": 0,
+      "distance_km": 0.885,
+      "duration_s": 49.000,
+      "start": "2026-05-01T10:00:00",
+      "end": "2026-05-01T10:00:49",
+      "sources": ["nmea_rmc_gga.ts"]
+    }
+  ],
+  "totals": {
+    "files": 1,
+    "files_parsed": 1,
+    "groups": 1,
+    "points": 50,
+    "distance_km": 0.885
+  }
+}

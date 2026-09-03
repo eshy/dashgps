@@ -1,0 +1,70 @@
+{
+  "files": [
+    {
+      "file": "ligo_plain_mp4_free.mp4",
+      "format": "ligo.plain",
+      "status": "reverse-engineered",
+      "meta": {
+        "found_in": "mp4",
+        "variant": 5,
+        "count_field": 60,
+        "stride": 140,
+        "records": 60
+      },
+      "warnings": [],
+      "error": null,
+      "read_ranges": [
+        [
+          0,
+          12548
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          16,
+          32
+        ],
+        [
+          4120,
+          4136
+        ],
+        [
+          4128,
+          4139
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          16,
+          32
+        ],
+        [
+          4120,
+          4136
+        ],
+        [
+          4128,
+          4139
+        ],
+        [
+          4128,
+          12548
+        ]
+      ],
+      "bytes_read": 21118,
+      "file_size": 12548
+    }
+  ]
+}

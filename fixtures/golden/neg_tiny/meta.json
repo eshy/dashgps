@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "file": "neg_tiny.ts",
+      "format": null,
+      "status": null,
+      "meta": {},
+      "warnings": [],
+      "error": "no known GPS format matched",
+      "read_ranges": [
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          12
+        ]
+      ],
+      "bytes_read": 36,
+      "file_size": 12
+    }
+  ]
+}

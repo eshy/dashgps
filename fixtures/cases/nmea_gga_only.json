@@ -1,0 +1,20 @@
+{
+  "id": "nmea_gga_only",
+  "spec": "04-nmea",
+  "builder": "nmea_ts",
+  "output": "nmea_gga_only.ts",
+  "expect": {
+    "format": null,
+    "points": 0
+  },
+  "params": {
+    "seed": 63,
+    "rmc": false,
+    "sentences_per_pes": 3,
+    "track": {
+      "start": "2026/05/04 10:00:00",
+      "n": 20,
+      "nofix_prefix": 0
+    }
+  }
+}

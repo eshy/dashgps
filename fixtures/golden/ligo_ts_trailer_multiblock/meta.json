@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "file": "ligo_ts_trailer_multiblock.ts",
+      "format": "ligo.ts_trailer",
+      "status": "verified",
+      "meta": {
+        "end_magic": "####",
+        "trailer_len": 11770,
+        "blocks": 2,
+        "variant": 9,
+        "count_field": 80,
+        "stride": 140,
+        "records": 80
+      },
+      "warnings": [],
+      "error": null,
+      "read_ranges": [
+        [
+          0,
+          23802
+        ]
+      ],
+      "bytes_read": 23802,
+      "file_size": 23802
+    }
+  ]
+}

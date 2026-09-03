@@ -1,0 +1,103 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+
+jobs:
+  fixtures:
+    name: fixtures are deterministic
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Regenerate and diff
+        run: |
+          python3 fixtures/build_fixtures.py
+          git diff --exit-code fixtures/bin fixtures/cases fixtures/manifest.json
+
+  guards:
+    name: determinism and version guards
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python3 scripts/check_determinism.py --self-test
+      - run: python3 scripts/check_version.py
+
+  python:
+    name: python ${{ matrix.python }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: ["3.9", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "${{ matrix.python }}" }
+      - name: Run the test suite
+        working-directory: python/tests
+        run: python -m unittest discover -s .
+
+  js:
+    name: node ${{ matrix.node }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "${{ matrix.node }}" }
+      - name: Run the test suite
+        working-directory: js
+        run: node --test test/*.test.js
+
+  parity:
+    name: python and javascript agree byte-for-byte
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: ./scripts/parity.sh
+
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: pipx install ruff
+      - run: ruff check python/ fixtures/ scripts/
+      - name: Syntax-check every JS module
+        run: |
+          for f in $(find js/src js/bin web -name '*.js'); do node --check "$f"; done
+
+  web:
+    name: web build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node scripts/build_web.mjs
+      - name: The deployed bundle must not import node builtins
+        run: |
+          if grep -rn "node:" web/dist/lib web/dist/*.js; then
+            echo "web/dist imports a node builtin; it would fail in a browser"; exit 1
+          fi
+          echo "web/dist is browser-safe"

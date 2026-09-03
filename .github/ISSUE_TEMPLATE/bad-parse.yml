@@ -1,0 +1,37 @@
+name: Wrong or missing data
+description: dashgps produced a track, but it is wrong, incomplete, or in the wrong place.
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: symptom
+    attributes:
+      label: What is wrong?
+      options:
+        - Coordinates are in the wrong part of the world
+        - Times are wrong or shifted
+        - Some clips produce no points
+        - Speed, heading or altitude look wrong
+        - Points are flagged as outliers that should not be
+        - Something else
+    validations: { required: true }
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: Diagnostic output
+      description: "`dashgps inspect --redact YOURFILE.ts` — add `--hexdump` if you can."
+      render: text
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes:
+      label: dashgps version
+      description: "`dashgps --version`, or the version in the web tool's header."
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect, and what did you get?
+      description: |
+        If coordinates are wrong, roughly where should the track be? "Should be Mississippi,
+        shows North Carolina" is exactly the kind of detail that identifies an obfuscated format.
+    validations: { required: true }

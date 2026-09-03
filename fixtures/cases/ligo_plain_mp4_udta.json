@@ -1,0 +1,22 @@
+{
+  "id": "ligo_plain_mp4_udta",
+  "spec": "02-ligogps-plaintext",
+  "builder": "ligo_mp4_atom",
+  "output": "ligo_plain_mp4_udta.mp4",
+  "expect": {
+    "format": "ligo.plain",
+    "points": 45,
+    "stride": 132
+  },
+  "params": {
+    "seed": 41,
+    "stride": 132,
+    "atom": "skip",
+    "nest": "udta",
+    "track": {
+      "start": "2026/08/15 09:00:00",
+      "n": 45,
+      "nofix_prefix": 0
+    }
+  }
+}

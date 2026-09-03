@@ -1,0 +1,23 @@
+{
+  "id": "nmea_bad_checksum",
+  "spec": "04-nmea",
+  "builder": "nmea_ts",
+  "output": "nmea_bad_checksum.ts",
+  "expect": {
+    "format": "nmea",
+    "points": 24
+  },
+  "params": {
+    "seed": 62,
+    "corrupt_every": 5,
+    "sentences_per_pes": 4,
+    "track": {
+      "start": "2026/05/03 10:00:00",
+      "n": 30,
+      "nofix_prefix": 0,
+      "lat0": 47.6,
+      "lon0": -122.3,
+      "speed_kmh": 65.0
+    }
+  }
+}

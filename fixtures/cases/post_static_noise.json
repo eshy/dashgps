@@ -1,0 +1,22 @@
+{
+  "id": "post_static_noise",
+  "spec": "20-postprocess",
+  "builder": "ligo_ts_trailer",
+  "output": "post_static_noise.ts",
+  "expect": {
+    "format": "ligo.ts_trailer",
+    "points": 120,
+    "outliers": 0
+  },
+  "params": {
+    "seed": 32,
+    "stride": 140,
+    "track": {
+      "start": "2026/08/21 11:00:00",
+      "n": 120,
+      "nofix_prefix": 0,
+      "path": "static",
+      "speed_kmh": 0.0
+    }
+  }
+}

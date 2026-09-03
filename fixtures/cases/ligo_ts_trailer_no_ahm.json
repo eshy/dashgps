@@ -1,0 +1,21 @@
+{
+  "id": "ligo_ts_trailer_no_ahm",
+  "spec": "01-ligogps-ts-trailer",
+  "builder": "ligo_ts_trailer",
+  "output": "ligo_ts_trailer_no_ahm.ts",
+  "expect": {
+    "format": "ligo.ts_trailer",
+    "points": 40,
+    "stride": 140
+  },
+  "params": {
+    "seed": 20,
+    "stride": 140,
+    "with_ahm": false,
+    "track": {
+      "start": "2026/08/11 04:00:00",
+      "n": 40,
+      "nofix_prefix": 0
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "ligo_ts_trailer_count_zero",
+  "spec": "01-ligogps-ts-trailer",
+  "builder": "ligo_ts_trailer",
+  "output": "ligo_ts_trailer_count_zero.ts",
+  "expect": {
+    "format": "ligo.ts_trailer",
+    "points": 30,
+    "stride": 140
+  },
+  "params": {
+    "seed": 17,
+    "stride": 140,
+    "count_field": 0,
+    "track": {
+      "start": "2026/08/08 04:00:00",
+      "n": 30,
+      "nofix_prefix": 0
+    }
+  }
+}

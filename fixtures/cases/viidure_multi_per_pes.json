@@ -1,0 +1,22 @@
+{
+  "id": "viidure_multi_per_pes",
+  "spec": "03-viidure",
+  "builder": "viidure_ts",
+  "output": "viidure_multi_per_pes.ts",
+  "expect": {
+    "format": "viidure",
+    "points": 60
+  },
+  "params": {
+    "seed": 51,
+    "records_per_pes": 5,
+    "track": {
+      "start": "2026/04/17 01:01:02",
+      "n": 60,
+      "nofix_prefix": 0,
+      "lat0": 42.5,
+      "lon0": -88.1,
+      "speed_kmh": 70.0
+    }
+  }
+}

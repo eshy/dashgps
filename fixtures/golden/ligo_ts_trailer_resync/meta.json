@@ -1,0 +1,30 @@
+{
+  "files": [
+    {
+      "file": "ligo_ts_trailer_resync.ts",
+      "format": "ligo.ts_trailer",
+      "status": "verified",
+      "meta": {
+        "end_magic": "####",
+        "trailer_len": 5740,
+        "blocks": 2,
+        "variant": 9,
+        "count_field": 40,
+        "stride": 140,
+        "records": 40
+      },
+      "warnings": [
+        "resynchronised to block header at trailer+104"
+      ],
+      "error": null,
+      "read_ranges": [
+        [
+          0,
+          17772
+        ]
+      ],
+      "bytes_read": 17772,
+      "file_size": 17772
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "files": [
+    {
+      "file": "ligo_plain_ts_stream.ts",
+      "format": "ligo.plain",
+      "status": "reverse-engineered",
+      "meta": {
+        "found_in": "scan",
+        "variant": 5,
+        "count_field": 35,
+        "stride": 140,
+        "records": 35
+      },
+      "warnings": [],
+      "error": null,
+      "read_ranges": [
+        [
+          0,
+          11000
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          11000
+        ],
+        [
+          0,
+          11000
+        ],
+        [
+          0,
+          11000
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          11000
+        ],
+        [
+          0,
+          11000
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          11000
+        ],
+        [
+          6016,
+          11000
+        ]
+      ],
+      "bytes_read": 82032,
+      "file_size": 11000
+    }
+  ]
+}

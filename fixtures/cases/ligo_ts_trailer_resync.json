@@ -1,0 +1,32 @@
+{
+  "id": "ligo_ts_trailer_resync",
+  "spec": "01-ligogps-ts-trailer",
+  "builder": "ligo_ts_trailer",
+  "output": "ligo_ts_trailer_resync.ts",
+  "expect": {
+    "format": "ligo.ts_trailer",
+    "points": 40,
+    "stride": 140
+  },
+  "params": {
+    "seed": 16,
+    "stride": 140,
+    "blocks": [
+      {
+        "tag": "skip",
+        "kind": "corrupt",
+        "bytes": 96,
+        "size": 3
+      },
+      {
+        "tag": "SKIP",
+        "kind": "ligo"
+      }
+    ],
+    "track": {
+      "start": "2026/08/07 05:00:00",
+      "n": 40,
+      "nofix_prefix": 0
+    }
+  }
+}

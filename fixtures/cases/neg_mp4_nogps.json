@@ -1,0 +1,14 @@
+{
+  "id": "neg_mp4_nogps",
+  "spec": "00-model",
+  "builder": "raw",
+  "output": "neg_mp4_nogps.mp4",
+  "expect": {
+    "format": null,
+    "points": 0
+  },
+  "params": {
+    "seed": 71,
+    "kind": "mp4_nogps"
+  }
+}

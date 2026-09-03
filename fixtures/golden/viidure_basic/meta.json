@@ -1,0 +1,61 @@
+{
+  "files": [
+    {
+      "file": "viidure_basic.ts",
+      "format": "viidure",
+      "status": "untested",
+      "meta": {
+        "records": 40,
+        "unknown_field_values": [
+          10
+        ]
+      },
+      "warnings": [],
+      "error": null,
+      "read_ranges": [
+        [
+          0,
+          24064
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          24064
+        ],
+        [
+          0,
+          24064
+        ],
+        [
+          0,
+          24064
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          24064
+        ],
+        [
+          0,
+          24064
+        ],
+        [
+          0,
+          24064
+        ],
+        [
+          0,
+          24064
+        ]
+      ],
+      "bytes_read": 192544,
+      "file_size": 24064
+    }
+  ]
+}

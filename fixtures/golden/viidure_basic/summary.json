@@ -1,0 +1,42 @@
+{
+  "generator": "dashgps 0.1.0",
+  "time_is_naive": true,
+  "files": [
+    {
+      "name": "viidure_basic.ts",
+      "size": 24064,
+      "format": "viidure",
+      "status": "untested",
+      "records": 40,
+      "points": 40,
+      "dropped_nofix": 0,
+      "t_start": "2026-04-16T01:01:02",
+      "t_end": "2026-04-16T01:01:41",
+      "bbox": [-88.332917, 42.210514, -88.321270, 42.211382],
+      "warnings": [],
+      "error": null
+    }
+  ],
+  "groups": [
+    {
+      "label": "all",
+      "points": 40,
+      "outlier_points": 0,
+      "dropped_duplicate_times": 0,
+      "runs": 1,
+      "glitch_runs": 0,
+      "distance_km": 0.965,
+      "duration_s": 39.000,
+      "start": "2026-04-16T01:01:02",
+      "end": "2026-04-16T01:01:41",
+      "sources": ["viidure_basic.ts"]
+    }
+  ],
+  "totals": {
+    "files": 1,
+    "files_parsed": 1,
+    "groups": 1,
+    "points": 40,
+    "distance_km": 0.965
+  }
+}

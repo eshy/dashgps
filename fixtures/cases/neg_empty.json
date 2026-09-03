@@ -1,0 +1,13 @@
+{
+  "id": "neg_empty",
+  "spec": "00-model",
+  "builder": "raw",
+  "output": "neg_empty.ts",
+  "expect": {
+    "format": null,
+    "points": 0
+  },
+  "params": {
+    "kind": "empty"
+  }
+}

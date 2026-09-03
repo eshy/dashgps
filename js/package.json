@@ -1,0 +1,48 @@
+{
+  "name": "dashgps",
+  "version": "0.1.0",
+  "description": "Extract GPS tracks from dashcam video files. Zero dependencies, runs in the browser and in Node.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "dashgps": "./bin/dashgps.js"
+  },
+  "main": "./src/index.js",
+  "exports": {
+    ".": {
+      "node": "./src/index.js",
+      "browser": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./io-node": "./src/io_node.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "dashcam",
+    "gps",
+    "gpx",
+    "mpeg-ts",
+    "ligogps",
+    "nmea",
+    "telemetry"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashgps/dashgps.git"
+  },
+  "sideEffects": [
+    "./src/index.js"
+  ]
+}

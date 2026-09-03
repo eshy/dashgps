@@ -1,0 +1,20 @@
+{
+  "id": "ligo_ts_trailer_bad_length",
+  "spec": "01-ligogps-ts-trailer",
+  "builder": "ligo_ts_trailer",
+  "output": "ligo_ts_trailer_bad_length.ts",
+  "expect": {
+    "format": "ligo.plain",
+    "points": 10
+  },
+  "params": {
+    "seed": 22,
+    "stride": 140,
+    "bad_length": true,
+    "track": {
+      "start": "2026/08/13 04:00:00",
+      "n": 10,
+      "nofix_prefix": 0
+    }
+  }
+}

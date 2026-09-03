@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="dashgps 0.1.0" xmlns="http://www.topografix.com/GPX/1/1" xmlns:dashgps="https://github.com/dashgps/dashgps/ns/1">
+  <!-- Times are the camera's own clock, which carries no timezone. They are
+       written with a Z suffix because GPX requires one, but they are NOT UTC
+       unless dashgps was run with --tz-offset. -->
+  <metadata>
+    <name>all</name>
+    <time>2026-08-11T04:00:00Z</time>
+  </metadata>
+  <trk>
+    <name>all</name>
+    <trkseg>
+      <trkpt lat="25.774408" lon="-80.137971">
+        <time>2026-08-11T04:00:00Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774386" lon="-80.138102">
+        <time>2026-08-11T04:00:01Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774364" lon="-80.138233">
+        <time>2026-08-11T04:00:02Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774344" lon="-80.138364">
+        <time>2026-08-11T04:00:03Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774323" lon="-80.138495">
+        <time>2026-08-11T04:00:04Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774304" lon="-80.138626">
+        <time>2026-08-11T04:00:05Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774284" lon="-80.138758">
+        <time>2026-08-11T04:00:06Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774265" lon="-80.138889">
+        <time>2026-08-11T04:00:07Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774247" lon="-80.139021">
+        <time>2026-08-11T04:00:08Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774230" lon="-80.139153">
+        <time>2026-08-11T04:00:09Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774212" lon="-80.139284">
+        <time>2026-08-11T04:00:10Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774196" lon="-80.139416">
+        <time>2026-08-11T04:00:11Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774179" lon="-80.139548">
+        <time>2026-08-11T04:00:12Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774164" lon="-80.139680">
+        <time>2026-08-11T04:00:13Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774149" lon="-80.139812">
+        <time>2026-08-11T04:00:14Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774134" lon="-80.139945">
+        <time>2026-08-11T04:00:15Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774120" lon="-80.140077">
+        <time>2026-08-11T04:00:16Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774106" lon="-80.140209">
+        <time>2026-08-11T04:00:17Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774093" lon="-80.140341">
+        <time>2026-08-11T04:00:18Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774081" lon="-80.140474">
+        <time>2026-08-11T04:00:19Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774069" lon="-80.140606">
+        <time>2026-08-11T04:00:20Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774057" lon="-80.140739">
+        <time>2026-08-11T04:00:21Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774046" lon="-80.140872">
+        <time>2026-08-11T04:00:22Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774036" lon="-80.141004">
+        <time>2026-08-11T04:00:23Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774026" lon="-80.141137">
+        <time>2026-08-11T04:00:24Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774017" lon="-80.141270">
+        <time>2026-08-11T04:00:25Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.774008" lon="-80.141402">
+        <time>2026-08-11T04:00:26Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.773999" lon="-80.141535">
+        <time>2026-08-11T04:00:27Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.773991" lon="-80.141668">
+        <time>2026-08-11T04:00:28Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.773984" lon="-80.141801">
+        <time>2026-08-11T04:00:29Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.773977" lon="-80.141934">
+        <time>2026-08-11T04:00:30Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.773971" lon="-80.142067">
+        <time>2026-08-11T04:00:31Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.773965" lon="-80.142200">
+        <time>2026-08-11T04:00:32Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.773960" lon="-80.142333">
+        <time>2026-08-11T04:00:33Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.773955" lon="-80.142466">
+        <time>2026-08-11T04:00:34Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.773951" lon="-80.142599">
+        <time>2026-08-11T04:00:35Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.773948" lon="-80.142732">
+        <time>2026-08-11T04:00:36Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.773944" lon="-80.142865">
+        <time>2026-08-11T04:00:37Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.773942" lon="-80.142998">
+        <time>2026-08-11T04:00:38Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+      <trkpt lat="25.773940" lon="-80.143132">
+        <time>2026-08-11T04:00:39Z</time>
+        <extensions>
+          <dashgps:speed_kmh>48.00</dashgps:speed_kmh>
+        </extensions>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

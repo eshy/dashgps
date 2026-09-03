@@ -1,0 +1,48 @@
+{
+  "files": [
+    {
+      "file": "nmea_gga_only.ts",
+      "format": null,
+      "status": null,
+      "meta": {},
+      "warnings": [],
+      "error": "no known GPS format matched",
+      "read_ranges": [
+        [
+          0,
+          6580
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          6580
+        ],
+        [
+          0,
+          6580
+        ],
+        [
+          0,
+          6580
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          6580
+        ],
+        [
+          0,
+          6580
+        ]
+      ],
+      "bytes_read": 39512,
+      "file_size": 6580
+    }
+  ]
+}

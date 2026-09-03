@@ -1,0 +1,63 @@
+{
+  "files": [
+    {
+      "file": "nmea_rmc_only.ts",
+      "format": "nmea",
+      "status": "untested",
+      "meta": {
+        "sentences": 30,
+        "checksum_rejects": 0
+      },
+      "warnings": [],
+      "error": null,
+      "read_ranges": [
+        [
+          0,
+          9024
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          9024
+        ],
+        [
+          0,
+          9024
+        ],
+        [
+          0,
+          9024
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          9024
+        ],
+        [
+          0,
+          9024
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          9024
+        ],
+        [
+          0,
+          9024
+        ]
+      ],
+      "bytes_read": 72240,
+      "file_size": 9024
+    }
+  ]
+}

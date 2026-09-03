@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "file": "ligo_ts_trailer_amp_magic.ts",
+      "format": "ligo.ts_trailer",
+      "status": "verified",
+      "meta": {
+        "end_magic": "&&&&",
+        "trailer_len": 8436,
+        "blocks": 1,
+        "variant": 9,
+        "count_field": 60,
+        "stride": 140,
+        "records": 60
+      },
+      "warnings": [],
+      "error": null,
+      "read_ranges": [
+        [
+          0,
+          20468
+        ]
+      ],
+      "bytes_read": 20468,
+      "file_size": 20468
+    }
+  ]
+}

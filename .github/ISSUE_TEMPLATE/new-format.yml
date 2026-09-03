@@ -1,0 +1,45 @@
+name: My dashcam is not supported
+description: Help us add a camera. Start with the diagnostic — usually that is all we need.
+labels: ["format"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Please do not attach a raw dashcam file.** Its coordinates include wherever you drove,
+        which for most people means their home address. The diagnostic below is redacted and is
+        almost always enough for us to identify the format.
+  - type: textarea
+    id: diagnostic
+    attributes:
+      label: Diagnostic output
+      description: |
+        Run this and paste the whole output:
+        ```
+        dashgps inspect --redact --hexdump YOURFILE.ts
+        ```
+        Or, in the [web tool](https://dashgps.github.io/dashgps/), press **Copy diagnostics**.
+      render: text
+    validations: { required: true }
+  - type: input
+    id: camera
+    attributes:
+      label: Camera make, model and firmware
+      placeholder: "e.g. Viofo A229 Pro, firmware 1.4"
+    validations: { required: true }
+  - type: input
+    id: player
+    attributes:
+      label: Which player shows the GPS correctly?
+      description: The vendor's own player is a strong hint about where the data lives.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: Where you bought it, what the on-screen overlay shows, other tools you tried.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Before you post
+      options:
+        - label: I used `--redact`, or I am content for these coordinates to be public.
+          required: true

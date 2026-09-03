@@ -1,0 +1,21 @@
+{
+  "id": "nmea_mp4_free",
+  "spec": "04-nmea",
+  "builder": "nmea_mp4",
+  "output": "nmea_mp4_free.mp4",
+  "expect": {
+    "format": "nmea",
+    "points": 40
+  },
+  "params": {
+    "seed": 64,
+    "track": {
+      "start": "2026/05/05 10:00:00",
+      "n": 40,
+      "nofix_prefix": 0,
+      "lat0": 34.05,
+      "lon0": -118.24,
+      "speed_kmh": 55.0
+    }
+  }
+}

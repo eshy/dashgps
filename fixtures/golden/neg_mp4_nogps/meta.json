@@ -1,0 +1,52 @@
+{
+  "files": [
+    {
+      "file": "neg_mp4_nogps.mp4",
+      "format": null,
+      "status": null,
+      "meta": {},
+      "warnings": [],
+      "error": "no known GPS format matched",
+      "read_ranges": [
+        [
+          0,
+          8216
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          16,
+          32
+        ],
+        [
+          0,
+          8216
+        ],
+        [
+          0,
+          8216
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          16,
+          32
+        ]
+      ],
+      "bytes_read": 24744,
+      "file_size": 8216
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "files": [
+    {
+      "file": "ligo_ts_trailer_bad_length.ts",
+      "format": "ligo.plain",
+      "status": "reverse-engineered",
+      "meta": {
+        "found_in": "scan",
+        "variant": 9,
+        "count_field": 10,
+        "stride": 140,
+        "records": 10
+      },
+      "warnings": [],
+      "error": null,
+      "read_ranges": [
+        [
+          0,
+          13468
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          13468
+        ],
+        [
+          0,
+          13468
+        ],
+        [
+          0,
+          13468
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          13468
+        ],
+        [
+          0,
+          13468
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          13468
+        ],
+        [
+          12040,
+          13468
+        ]
+      ],
+      "bytes_read": 95752,
+      "file_size": 13468
+    }
+  ]
+}

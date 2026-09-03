@@ -1,0 +1,29 @@
+{
+  "generator": "dashgps 0.1.0",
+  "time_is_naive": true,
+  "files": [
+    {
+      "name": "neg_mp4_nogps.mp4",
+      "size": 8216,
+      "format": null,
+      "status": null,
+      "records": 0,
+      "points": 0,
+      "dropped_nofix": 0,
+      "t_start": null,
+      "t_end": null,
+      "bbox": null,
+      "warnings": [],
+      "error": "no known GPS format matched"
+    }
+  ],
+  "groups": [
+  ],
+  "totals": {
+    "files": 1,
+    "files_parsed": 0,
+    "groups": 0,
+    "points": 0,
+    "distance_km": 0.000
+  }
+}

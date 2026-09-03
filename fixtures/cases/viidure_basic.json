@@ -1,0 +1,22 @@
+{
+  "id": "viidure_basic",
+  "spec": "03-viidure",
+  "builder": "viidure_ts",
+  "output": "viidure_basic.ts",
+  "expect": {
+    "format": "viidure",
+    "points": 40
+  },
+  "params": {
+    "seed": 50,
+    "records_per_pes": 1,
+    "track": {
+      "start": "2026/04/16 01:01:02",
+      "n": 40,
+      "nofix_prefix": 0,
+      "lat0": 42.211424,
+      "lon0": -88.320975,
+      "speed_kmh": 89.1
+    }
+  }
+}

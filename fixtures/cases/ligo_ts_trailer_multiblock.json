@@ -1,0 +1,31 @@
+{
+  "id": "ligo_ts_trailer_multiblock",
+  "spec": "01-ligogps-ts-trailer",
+  "builder": "ligo_ts_trailer",
+  "output": "ligo_ts_trailer_multiblock.ts",
+  "expect": {
+    "format": "ligo.ts_trailer",
+    "points": 80,
+    "stride": 140
+  },
+  "params": {
+    "seed": 14,
+    "stride": 140,
+    "blocks": [
+      {
+        "tag": "skip",
+        "kind": "binary",
+        "bytes": 512
+      },
+      {
+        "tag": "SKIP",
+        "kind": "ligo"
+      }
+    ],
+    "track": {
+      "start": "2026/08/05 07:30:00",
+      "n": 80,
+      "nofix_prefix": 0
+    }
+  }
+}

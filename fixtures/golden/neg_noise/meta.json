@@ -1,0 +1,40 @@
+{
+  "files": [
+    {
+      "file": "neg_noise.ts",
+      "format": null,
+      "status": null,
+      "meta": {},
+      "warnings": [],
+      "error": "no known GPS format matched",
+      "read_ranges": [
+        [
+          0,
+          8192
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          8192
+        ],
+        [
+          0,
+          8192
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          8192
+        ]
+      ],
+      "bytes_read": 32800,
+      "file_size": 8192
+    }
+  ]
+}

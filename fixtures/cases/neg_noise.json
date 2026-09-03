@@ -1,0 +1,15 @@
+{
+  "id": "neg_noise",
+  "spec": "00-model",
+  "builder": "raw",
+  "output": "neg_noise.ts",
+  "expect": {
+    "format": null,
+    "points": 0
+  },
+  "params": {
+    "seed": 70,
+    "kind": "noise",
+    "bytes": 8192
+  }
+}

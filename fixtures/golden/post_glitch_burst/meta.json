@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "file": "post_glitch_burst.ts",
+      "format": "ligo.ts_trailer",
+      "status": "verified",
+      "meta": {
+        "end_magic": "####",
+        "trailer_len": 28036,
+        "blocks": 1,
+        "variant": 9,
+        "count_field": 200,
+        "stride": 140,
+        "records": 200
+      },
+      "warnings": [],
+      "error": null,
+      "read_ranges": [
+        [
+          0,
+          40068
+        ]
+      ],
+      "bytes_read": 40068,
+      "file_size": 40068
+    }
+  ]
+}

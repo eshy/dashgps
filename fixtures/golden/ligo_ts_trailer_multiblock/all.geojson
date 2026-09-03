@@ -1,0 +1,1066 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "group": "all",
+    "generator": "dashgps 0.1.0",
+    "time_is_naive": true
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "run": 0,
+        "points": 80,
+        "distance_km": 1.053,
+        "outlier": false,
+        "start": "2026-08-05T07:30:00",
+        "end": "2026-08-05T07:31:19"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-80.137971, 25.774408, -10.0],
+          [-80.138102, 25.774386, -9.0],
+          [-80.138233, 25.774364, -8.0],
+          [-80.138364, 25.774344, -7.0],
+          [-80.138495, 25.774323, -6.0],
+          [-80.138626, 25.774304, -10.0],
+          [-80.138758, 25.774284, -9.0],
+          [-80.138889, 25.774265, -8.0],
+          [-80.139021, 25.774247, -7.0],
+          [-80.139153, 25.774230, -6.0],
+          [-80.139284, 25.774212, -10.0],
+          [-80.139416, 25.774196, -9.0],
+          [-80.139548, 25.774179, -8.0],
+          [-80.139680, 25.774164, -7.0],
+          [-80.139812, 25.774149, -6.0],
+          [-80.139945, 25.774134, -10.0],
+          [-80.140077, 25.774120, -9.0],
+          [-80.140209, 25.774106, -8.0],
+          [-80.140341, 25.774093, -7.0],
+          [-80.140474, 25.774081, -6.0],
+          [-80.140606, 25.774069, -10.0],
+          [-80.140739, 25.774057, -9.0],
+          [-80.140872, 25.774046, -8.0],
+          [-80.141004, 25.774036, -7.0],
+          [-80.141137, 25.774026, -6.0],
+          [-80.141270, 25.774017, -10.0],
+          [-80.141402, 25.774008, -9.0],
+          [-80.141535, 25.773999, -8.0],
+          [-80.141668, 25.773991, -7.0],
+          [-80.141801, 25.773984, -6.0],
+          [-80.141934, 25.773977, -10.0],
+          [-80.142067, 25.773971, -9.0],
+          [-80.142200, 25.773965, -8.0],
+          [-80.142333, 25.773960, -7.0],
+          [-80.142466, 25.773955, -6.0],
+          [-80.142599, 25.773951, -10.0],
+          [-80.142732, 25.773948, -9.0],
+          [-80.142865, 25.773944, -8.0],
+          [-80.142998, 25.773942, -7.0],
+          [-80.143132, 25.773940, -6.0],
+          [-80.143265, 25.773938, -10.0],
+          [-80.143398, 25.773937, -9.0],
+          [-80.143531, 25.773937, -8.0],
+          [-80.143664, 25.773937, -7.0],
+          [-80.143797, 25.773937, -6.0],
+          [-80.143930, 25.773938, -10.0],
+          [-80.144064, 25.773940, -9.0],
+          [-80.144197, 25.773942, -8.0],
+          [-80.144330, 25.773944, -7.0],
+          [-80.144463, 25.773948, -6.0],
+          [-80.144596, 25.773951, -10.0],
+          [-80.144729, 25.773955, -9.0],
+          [-80.144862, 25.773960, -8.0],
+          [-80.144995, 25.773965, -7.0],
+          [-80.145128, 25.773971, -6.0],
+          [-80.145261, 25.773977, -10.0],
+          [-80.145394, 25.773984, -9.0],
+          [-80.145527, 25.773991, -8.0],
+          [-80.145660, 25.773999, -7.0],
+          [-80.145793, 25.774008, -6.0],
+          [-80.145926, 25.774017, -10.0],
+          [-80.146058, 25.774026, -9.0],
+          [-80.146191, 25.774036, -8.0],
+          [-80.146324, 25.774046, -7.0],
+          [-80.146456, 25.774057, -6.0],
+          [-80.146589, 25.774069, -10.0],
+          [-80.146721, 25.774081, -9.0],
+          [-80.146854, 25.774093, -8.0],
+          [-80.146986, 25.774106, -7.0],
+          [-80.147118, 25.774120, -6.0],
+          [-80.147251, 25.774134, -10.0],
+          [-80.147383, 25.774149, -9.0],
+          [-80.147515, 25.774164, -8.0],
+          [-80.147647, 25.774179, -7.0],
+          [-80.147779, 25.774196, -6.0],
+          [-80.147911, 25.774212, -10.0],
+          [-80.148042, 25.774230, -9.0],
+          [-80.148174, 25.774247, -8.0],
+          [-80.148306, 25.774265, -7.0],
+          [-80.148437, 25.774284, -6.0]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:00",
+        "speed_kmh": 48.00,
+        "heading_deg": 259.2,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.137971, 25.774408, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:01",
+        "speed_kmh": 48.00,
+        "heading_deg": 259.5,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.138102, 25.774386, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:02",
+        "speed_kmh": 48.00,
+        "heading_deg": 259.8,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.138233, 25.774364, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:03",
+        "speed_kmh": 48.00,
+        "heading_deg": 260.0,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.138364, 25.774344, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:04",
+        "speed_kmh": 48.00,
+        "heading_deg": 260.2,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.138495, 25.774323, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:05",
+        "speed_kmh": 48.00,
+        "heading_deg": 260.5,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.138626, 25.774304, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:06",
+        "speed_kmh": 48.00,
+        "heading_deg": 260.8,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.138758, 25.774284, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:07",
+        "speed_kmh": 48.00,
+        "heading_deg": 261.0,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.138889, 25.774265, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:08",
+        "speed_kmh": 48.00,
+        "heading_deg": 261.2,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.139021, 25.774247, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:09",
+        "speed_kmh": 48.00,
+        "heading_deg": 261.5,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.139153, 25.774230, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:10",
+        "speed_kmh": 48.00,
+        "heading_deg": 261.8,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.139284, 25.774212, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:11",
+        "speed_kmh": 48.00,
+        "heading_deg": 262.0,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.139416, 25.774196, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:12",
+        "speed_kmh": 48.00,
+        "heading_deg": 262.2,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.139548, 25.774179, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:13",
+        "speed_kmh": 48.00,
+        "heading_deg": 262.5,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.139680, 25.774164, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:14",
+        "speed_kmh": 48.00,
+        "heading_deg": 262.8,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.139812, 25.774149, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:15",
+        "speed_kmh": 48.00,
+        "heading_deg": 263.0,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.139945, 25.774134, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:16",
+        "speed_kmh": 48.00,
+        "heading_deg": 263.2,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.140077, 25.774120, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:17",
+        "speed_kmh": 48.00,
+        "heading_deg": 263.5,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.140209, 25.774106, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:18",
+        "speed_kmh": 48.00,
+        "heading_deg": 263.8,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.140341, 25.774093, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:19",
+        "speed_kmh": 48.00,
+        "heading_deg": 264.0,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.140474, 25.774081, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:20",
+        "speed_kmh": 48.00,
+        "heading_deg": 264.2,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.140606, 25.774069, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:21",
+        "speed_kmh": 48.00,
+        "heading_deg": 264.5,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.140739, 25.774057, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:22",
+        "speed_kmh": 48.00,
+        "heading_deg": 264.8,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.140872, 25.774046, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:23",
+        "speed_kmh": 48.00,
+        "heading_deg": 265.0,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.141004, 25.774036, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:24",
+        "speed_kmh": 48.00,
+        "heading_deg": 265.2,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.141137, 25.774026, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:25",
+        "speed_kmh": 48.00,
+        "heading_deg": 265.5,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.141270, 25.774017, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:26",
+        "speed_kmh": 48.00,
+        "heading_deg": 265.8,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.141402, 25.774008, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:27",
+        "speed_kmh": 48.00,
+        "heading_deg": 266.0,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.141535, 25.773999, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:28",
+        "speed_kmh": 48.00,
+        "heading_deg": 266.2,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.141668, 25.773991, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:29",
+        "speed_kmh": 48.00,
+        "heading_deg": 266.5,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.141801, 25.773984, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:30",
+        "speed_kmh": 48.00,
+        "heading_deg": 266.8,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.141934, 25.773977, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:31",
+        "speed_kmh": 48.00,
+        "heading_deg": 267.0,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.142067, 25.773971, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:32",
+        "speed_kmh": 48.00,
+        "heading_deg": 267.2,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.142200, 25.773965, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:33",
+        "speed_kmh": 48.00,
+        "heading_deg": 267.5,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.142333, 25.773960, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:34",
+        "speed_kmh": 48.00,
+        "heading_deg": 267.8,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.142466, 25.773955, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:35",
+        "speed_kmh": 48.00,
+        "heading_deg": 268.0,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.142599, 25.773951, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:36",
+        "speed_kmh": 48.00,
+        "heading_deg": 268.2,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.142732, 25.773948, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:37",
+        "speed_kmh": 48.00,
+        "heading_deg": 268.5,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.142865, 25.773944, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:38",
+        "speed_kmh": 48.00,
+        "heading_deg": 268.8,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.142998, 25.773942, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:39",
+        "speed_kmh": 48.00,
+        "heading_deg": 269.0,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.143132, 25.773940, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:40",
+        "speed_kmh": 48.00,
+        "heading_deg": 269.2,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.143265, 25.773938, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:41",
+        "speed_kmh": 48.00,
+        "heading_deg": 269.5,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.143398, 25.773937, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:42",
+        "speed_kmh": 48.00,
+        "heading_deg": 269.8,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.143531, 25.773937, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:43",
+        "speed_kmh": 48.00,
+        "heading_deg": 270.0,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.143664, 25.773937, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:44",
+        "speed_kmh": 48.00,
+        "heading_deg": 270.2,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.143797, 25.773937, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:45",
+        "speed_kmh": 48.00,
+        "heading_deg": 270.5,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.143930, 25.773938, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:46",
+        "speed_kmh": 48.00,
+        "heading_deg": 270.8,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.144064, 25.773940, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:47",
+        "speed_kmh": 48.00,
+        "heading_deg": 271.0,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.144197, 25.773942, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:48",
+        "speed_kmh": 48.00,
+        "heading_deg": 271.2,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.144330, 25.773944, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:49",
+        "speed_kmh": 48.00,
+        "heading_deg": 271.5,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.144463, 25.773948, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:50",
+        "speed_kmh": 48.00,
+        "heading_deg": 271.8,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.144596, 25.773951, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:51",
+        "speed_kmh": 48.00,
+        "heading_deg": 272.0,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.144729, 25.773955, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:52",
+        "speed_kmh": 48.00,
+        "heading_deg": 272.2,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.144862, 25.773960, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:53",
+        "speed_kmh": 48.00,
+        "heading_deg": 272.5,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.144995, 25.773965, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:54",
+        "speed_kmh": 48.00,
+        "heading_deg": 272.8,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.145128, 25.773971, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:55",
+        "speed_kmh": 48.00,
+        "heading_deg": 273.0,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.145261, 25.773977, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:56",
+        "speed_kmh": 48.00,
+        "heading_deg": 273.2,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.145394, 25.773984, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:57",
+        "speed_kmh": 48.00,
+        "heading_deg": 273.5,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.145527, 25.773991, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:58",
+        "speed_kmh": 48.00,
+        "heading_deg": 273.8,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.145660, 25.773999, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:30:59",
+        "speed_kmh": 48.00,
+        "heading_deg": 274.0,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.145793, 25.774008, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:00",
+        "speed_kmh": 48.00,
+        "heading_deg": 274.2,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.145926, 25.774017, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:01",
+        "speed_kmh": 48.00,
+        "heading_deg": 274.5,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.146058, 25.774026, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:02",
+        "speed_kmh": 48.00,
+        "heading_deg": 274.8,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.146191, 25.774036, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:03",
+        "speed_kmh": 48.00,
+        "heading_deg": 275.0,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.146324, 25.774046, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:04",
+        "speed_kmh": 48.00,
+        "heading_deg": 275.2,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.146456, 25.774057, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:05",
+        "speed_kmh": 48.00,
+        "heading_deg": 275.5,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.146589, 25.774069, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:06",
+        "speed_kmh": 48.00,
+        "heading_deg": 275.8,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.146721, 25.774081, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:07",
+        "speed_kmh": 48.00,
+        "heading_deg": 276.0,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.146854, 25.774093, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:08",
+        "speed_kmh": 48.00,
+        "heading_deg": 276.2,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.146986, 25.774106, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:09",
+        "speed_kmh": 48.00,
+        "heading_deg": 276.5,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.147118, 25.774120, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:10",
+        "speed_kmh": 48.00,
+        "heading_deg": 276.8,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.147251, 25.774134, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:11",
+        "speed_kmh": 48.00,
+        "heading_deg": 277.0,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.147383, 25.774149, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:12",
+        "speed_kmh": 48.00,
+        "heading_deg": 277.2,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.147515, 25.774164, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:13",
+        "speed_kmh": 48.00,
+        "heading_deg": 277.5,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.147647, 25.774179, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:14",
+        "speed_kmh": 48.00,
+        "heading_deg": 277.8,
+        "accel": [0.020, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.147779, 25.774196, -6.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:15",
+        "speed_kmh": 48.00,
+        "heading_deg": 278.0,
+        "accel": [0.000, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.147911, 25.774212, -10.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:16",
+        "speed_kmh": 48.00,
+        "heading_deg": 278.2,
+        "accel": [0.010, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.148042, 25.774230, -9.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:17",
+        "speed_kmh": 48.00,
+        "heading_deg": 278.5,
+        "accel": [0.020, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.148174, 25.774247, -8.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:18",
+        "speed_kmh": 48.00,
+        "heading_deg": 278.8,
+        "accel": [0.000, 0.000, 0.010],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.148306, 25.774265, -7.0] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2026-08-05T07:31:19",
+        "speed_kmh": 48.00,
+        "heading_deg": 279.0,
+        "accel": [0.010, 0.000, 0.000],
+        "run": 0,
+        "outlier": false
+      },
+      "geometry": { "type": "Point", "coordinates": [-80.148437, 25.774284, -6.0] }
+    }
+  ]
+}

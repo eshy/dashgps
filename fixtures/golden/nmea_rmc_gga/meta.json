@@ -1,0 +1,63 @@
+{
+  "files": [
+    {
+      "file": "nmea_rmc_gga.ts",
+      "format": "nmea",
+      "status": "untested",
+      "meta": {
+        "sentences": 100,
+        "checksum_rejects": 0
+      },
+      "warnings": [],
+      "error": null,
+      "read_ranges": [
+        [
+          0,
+          20304
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          20304
+        ],
+        [
+          0,
+          20304
+        ],
+        [
+          0,
+          20304
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          20304
+        ],
+        [
+          0,
+          20304
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          20304
+        ],
+        [
+          0,
+          20304
+        ]
+      ],
+      "bytes_read": 162480,
+      "file_size": 20304
+    }
+  ]
+}

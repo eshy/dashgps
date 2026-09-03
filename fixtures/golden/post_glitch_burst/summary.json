@@ -1,0 +1,42 @@
+{
+  "generator": "dashgps 0.1.0",
+  "time_is_naive": true,
+  "files": [
+    {
+      "name": "post_glitch_burst.ts",
+      "size": 40068,
+      "format": "ligo.ts_trailer",
+      "status": "verified",
+      "records": 200,
+      "points": 200,
+      "dropped_nofix": 0,
+      "t_start": "2026-08-19T11:00:00",
+      "t_end": "2026-08-19T11:03:19",
+      "bbox": [-81.552584, 24.874797, -80.137971, 25.780099],
+      "warnings": [],
+      "error": null
+    }
+  ],
+  "groups": [
+    {
+      "label": "all",
+      "points": 200,
+      "outlier_points": 12,
+      "dropped_duplicate_times": 0,
+      "runs": 3,
+      "glitch_runs": 1,
+      "distance_km": 2.480,
+      "duration_s": 199.000,
+      "start": "2026-08-19T11:00:00",
+      "end": "2026-08-19T11:03:19",
+      "sources": ["post_glitch_burst.ts"]
+    }
+  ],
+  "totals": {
+    "files": 1,
+    "files_parsed": 1,
+    "groups": 1,
+    "points": 200,
+    "distance_km": 2.480
+  }
+}

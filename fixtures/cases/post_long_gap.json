@@ -1,0 +1,22 @@
+{
+  "id": "post_long_gap",
+  "spec": "20-postprocess",
+  "builder": "ligo_ts_trailer",
+  "output": "post_long_gap.ts",
+  "expect": {
+    "format": "ligo.ts_trailer",
+    "points": 150,
+    "outliers": 0
+  },
+  "params": {
+    "seed": 31,
+    "stride": 140,
+    "track": {
+      "start": "2026/08/20 11:00:00",
+      "n": 150,
+      "nofix_prefix": 0,
+      "gap_at": 75,
+      "gap_s": 1800
+    }
+  }
+}

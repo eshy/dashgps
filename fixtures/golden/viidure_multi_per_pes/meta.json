@@ -1,0 +1,61 @@
+{
+  "files": [
+    {
+      "file": "viidure_multi_per_pes.ts",
+      "format": "viidure",
+      "status": "untested",
+      "meta": {
+        "records": 60,
+        "unknown_field_values": [
+          10
+        ]
+      },
+      "warnings": [],
+      "error": null,
+      "read_ranges": [
+        [
+          0,
+          12784
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          12784
+        ],
+        [
+          0,
+          12784
+        ],
+        [
+          0,
+          12784
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          12784
+        ],
+        [
+          0,
+          12784
+        ],
+        [
+          0,
+          12784
+        ],
+        [
+          0,
+          12784
+        ]
+      ],
+      "bytes_read": 102304,
+      "file_size": 12784
+    }
+  ]
+}

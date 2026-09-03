@@ -1,0 +1,13 @@
+{
+  "id": "neg_tiny",
+  "spec": "00-model",
+  "builder": "raw",
+  "output": "neg_tiny.ts",
+  "expect": {
+    "format": null,
+    "points": 0
+  },
+  "params": {
+    "kind": "tiny"
+  }
+}

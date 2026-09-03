@@ -1,0 +1,32 @@
+{
+  "id": "ligo_ts_trailer_size_excl_header",
+  "spec": "01-ligogps-ts-trailer",
+  "builder": "ligo_ts_trailer",
+  "output": "ligo_ts_trailer_size_excl_header.ts",
+  "expect": {
+    "format": "ligo.ts_trailer",
+    "points": 50,
+    "stride": 140
+  },
+  "params": {
+    "seed": 15,
+    "stride": 140,
+    "size_excl_header": true,
+    "blocks": [
+      {
+        "tag": "skip",
+        "kind": "binary",
+        "bytes": 128
+      },
+      {
+        "tag": "SKIP",
+        "kind": "ligo"
+      }
+    ],
+    "track": {
+      "start": "2026/08/06 06:00:00",
+      "n": 50,
+      "nofix_prefix": 0
+    }
+  }
+}

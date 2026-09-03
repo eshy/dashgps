@@ -1,0 +1,21 @@
+{
+  "id": "ligo_plain_mp4_free",
+  "spec": "02-ligogps-plaintext",
+  "builder": "ligo_mp4_atom",
+  "output": "ligo_plain_mp4_free.mp4",
+  "expect": {
+    "format": "ligo.plain",
+    "points": 60,
+    "stride": 140
+  },
+  "params": {
+    "seed": 40,
+    "stride": 140,
+    "atom": "free",
+    "track": {
+      "start": "2026/08/14 09:00:00",
+      "n": 60,
+      "nofix_prefix": 0
+    }
+  }
+}

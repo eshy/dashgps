@@ -1,0 +1,20 @@
+{
+  "id": "ligo_ts_trailer_stride140",
+  "spec": "01-ligogps-ts-trailer",
+  "builder": "ligo_ts_trailer",
+  "output": "ligo_ts_trailer_stride140.ts",
+  "expect": {
+    "format": "ligo.ts_trailer",
+    "points": 120,
+    "stride": 140
+  },
+  "params": {
+    "seed": 13,
+    "stride": 140,
+    "track": {
+      "start": "2026/08/04 08:00:00",
+      "n": 120,
+      "nofix_prefix": 0
+    }
+  }
+}

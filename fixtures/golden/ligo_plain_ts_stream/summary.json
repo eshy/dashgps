@@ -1,0 +1,42 @@
+{
+  "generator": "dashgps 0.1.0",
+  "time_is_naive": true,
+  "files": [
+    {
+      "name": "ligo_plain_ts_stream.ts",
+      "size": 11000,
+      "format": "ligo.plain",
+      "status": "reverse-engineered",
+      "records": 35,
+      "points": 35,
+      "dropped_nofix": 0,
+      "t_start": "2026-08-16T09:00:00",
+      "t_end": "2026-08-16T09:00:34",
+      "bbox": [-80.142466, 25.773955, -80.137971, 25.774408],
+      "warnings": [],
+      "error": null
+    }
+  ],
+  "groups": [
+    {
+      "label": "all",
+      "points": 35,
+      "outlier_points": 0,
+      "dropped_duplicate_times": 0,
+      "runs": 1,
+      "glitch_runs": 0,
+      "distance_km": 0.453,
+      "duration_s": 34.000,
+      "start": "2026-08-16T09:00:00",
+      "end": "2026-08-16T09:00:34",
+      "sources": ["ligo_plain_ts_stream.ts"]
+    }
+  ],
+  "totals": {
+    "files": 1,
+    "files_parsed": 1,
+    "groups": 1,
+    "points": 35,
+    "distance_km": 0.453
+  }
+}

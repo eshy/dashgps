@@ -1,0 +1,29 @@
+{
+  "generator": "dashgps 0.1.0",
+  "time_is_naive": true,
+  "files": [
+    {
+      "name": "ligo_ts_trailer_all_nofix.ts",
+      "size": 15568,
+      "format": "ligo.ts_trailer",
+      "status": "verified",
+      "records": 25,
+      "points": 0,
+      "dropped_nofix": 25,
+      "t_start": null,
+      "t_end": null,
+      "bbox": null,
+      "warnings": [],
+      "error": null
+    }
+  ],
+  "groups": [
+  ],
+  "totals": {
+    "files": 1,
+    "files_parsed": 1,
+    "groups": 0,
+    "points": 0,
+    "distance_km": 0.000
+  }
+}

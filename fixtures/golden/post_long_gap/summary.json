@@ -1,0 +1,42 @@
+{
+  "generator": "dashgps 0.1.0",
+  "time_is_naive": true,
+  "files": [
+    {
+      "name": "post_long_gap.ts",
+      "size": 33068,
+      "format": "ligo.ts_trailer",
+      "status": "verified",
+      "records": 150,
+      "points": 150,
+      "dropped_nofix": 0,
+      "t_start": "2026-08-20T11:00:00",
+      "t_end": "2026-08-20T11:32:29",
+      "bbox": [-80.157274, 25.773937, -80.137971, 25.776851],
+      "warnings": [],
+      "error": null
+    }
+  ],
+  "groups": [
+    {
+      "label": "all",
+      "points": 150,
+      "outlier_points": 0,
+      "dropped_duplicate_times": 0,
+      "runs": 2,
+      "glitch_runs": 0,
+      "distance_km": 1.973,
+      "duration_s": 1949.000,
+      "start": "2026-08-20T11:00:00",
+      "end": "2026-08-20T11:32:29",
+      "sources": ["post_long_gap.ts"]
+    }
+  ],
+  "totals": {
+    "files": 1,
+    "files_parsed": 1,
+    "groups": 1,
+    "points": 150,
+    "distance_km": 1.973
+  }
+}

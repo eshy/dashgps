@@ -1,0 +1,42 @@
+{
+  "generator": "dashgps 0.1.0",
+  "time_is_naive": true,
+  "files": [
+    {
+      "name": "ligo_ts_trailer_large.ts",
+      "size": 2298036,
+      "format": "ligo.ts_trailer",
+      "status": "verified",
+      "records": 300,
+      "points": 300,
+      "dropped_nofix": 0,
+      "t_start": "2026-08-12T04:00:00",
+      "t_end": "2026-08-12T04:04:59",
+      "bbox": [-80.171056, 25.773937, -80.137971, 25.789425],
+      "warnings": [],
+      "error": null
+    }
+  ],
+  "groups": [
+    {
+      "label": "all",
+      "points": 300,
+      "outlier_points": 0,
+      "dropped_duplicate_times": 0,
+      "runs": 1,
+      "glitch_runs": 0,
+      "distance_km": 3.987,
+      "duration_s": 299.000,
+      "start": "2026-08-12T04:00:00",
+      "end": "2026-08-12T04:04:59",
+      "sources": ["ligo_ts_trailer_large.ts"]
+    }
+  ],
+  "totals": {
+    "files": 1,
+    "files_parsed": 1,
+    "groups": 1,
+    "points": 300,
+    "distance_km": 3.987
+  }
+}
