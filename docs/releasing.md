@@ -27,8 +27,15 @@ step happens last, from CI, with no long-lived credential in existence.
 
    ```console
    $ npm login                 # interactive, uses your 2FA
-   $ cd js && npm publish --provenance --access public
+   $ cd js && npm pack --dry-run    # check what will ship
+   $ npm publish --access public
    ```
+
+   **No `--provenance` here.** Provenance attestations are signed with an OIDC identity that only
+   a supported CI provider can issue; run it on a laptop and npm fails with
+   `Automatic provenance generation not supported for provider: null`. The flag belongs in
+   `release.yml`, where it works — so `0.1.0` is the one version without an attestation, and every
+   release after it has one.
 
    Then at <https://www.npmjs.com/package/dashgps/access>:
    - **Trusted publisher → GitHub Actions**, with owner `eshy`, repository `dashgps`,
