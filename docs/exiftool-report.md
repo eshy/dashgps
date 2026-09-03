@@ -1,6 +1,7 @@
 # Report for ExifTool: LigoGPS trailers ending `####` are not found
 
-Draft of an upstream issue. Ready to file at <https://github.com/exiftool/exiftool/issues>.
+Filed upstream as <https://github.com/exiftool/exiftool/issues/470> on 2026-09-03.
+The section at the end records the confirmation run made after filing.
 
 ---
 
@@ -80,7 +81,7 @@ offered as data.
   `0x01`, `0x05`, `0x0D` and `0x14`. Since `0x09` is not in the `[\x01\x14]` "not fuzzed" set, a
   naive read would fuzz these coordinates — but the records here are the plaintext dialect, which
   `ProcessLigoGPS` already routes to `ParseLigoGPS` with `notFuzzed|kmh` before the fuzz flag
-  matters. Worth a check, not necessarily a change.
+  matters. **Now confirmed empirically — see below. No fuzzing occurs.**
 - `count_field` at `+0x10` is 300 on essentially every clip (one per second of a five-minute
   recording) and 299 on a few. `ProcessLigoGPS` ignores it and derives the count from the block
   length, which is the more robust choice; we mention it only because it is a usable cross-check.
@@ -93,3 +94,75 @@ An earlier draft of our spec claimed the stride in these files was 140 and that 
 therefore desynchronise. That was our arithmetic error reading a hex dump, caught when we ran our
 parser against the full corpus. The stride is 132, exactly as ExifTool assumes. **The end magic is
 the only difference.**
+
+---
+
+## Confirmation, run after filing
+
+The report above was written from reading the format and the module. It has since been tested
+against ExifTool **13.59**, cloned from `github.com/exiftool/exiftool` and run unmodified.
+
+### The claim about the probe is exact
+
+`&&&&` occurs exactly once in the entire ExifTool source tree, at `M2TS.pm:1016-1018`:
+
+```perl
+    if ($et->Options('ExtractEmbedded') and
+        $raf->Seek(-8, 2) and $raf->Read($buff, 8) == 8 and
+        $buff =~ /^&&&&/)
+```
+
+`LigoGPS.pm:293` sets `$pos = DirStart + 0x14`, and `LigoGPS.pm:301` iterates `$pos += 0x84`.
+Both match the report. The suggested one-line change is at the right place.
+
+### A four-byte experiment on real camera data
+
+From a real 933 MB ICESKY clip, two files were built: the first two megabytes of the original
+(genuine transport-stream packets) followed by the original 39,636-byte trailer, and a second file
+identical to it except that the trailer's end magic was changed from `####` to `&&&&`. `cmp -l`
+reports **4 differing bytes** and nothing else.
+
+Run through unmodified ExifTool 13.59 with `-ee3 -api LargeFileSupport=1`:
+
+| File | End magic | GPS tags |
+|---|---|---|
+| `real_hash.ts` | `####` | **0** |
+| `real_amp.ts`  | `&&&&` | **1801** |
+
+### The output is not merely present, it is correct
+
+All 300 records decode. Comparing them against this project's own extraction of the same clip:
+
+```
+exiftool records parsed:                    300
+dashgps points (no-fix already dropped):    268
+timestamps not found in exiftool output:      0
+coordinates identical:                      268
+coordinates differing:                        0
+largest difference:                         0.0 degrees
+exiftool records at 0,0 (no fix):            32     (268 + 32 = 300)
+```
+
+Two independent implementations agree to the last decimal place on every fixed record, and account
+for all 300. This answers the open question in the Notes: the `0x09` variant byte does **not** send
+these records down the fuzzing path, and no change beyond the end magic is required.
+
+### A minimal reproducer that carries no personal data
+
+`fixtures/bin/ligo_ts_trailer_basic.ts` and `fixtures/bin/ligo_ts_trailer_amp_magic.ts` are
+synthetic, a few kilobytes each, MIT licensed, and contain invented coordinates. They differ only
+in the end magic. Unmodified ExifTool reads the `&&&&` one and finds nothing in the other:
+
+```
+ligo_ts_trailer_amp_magic.ts  ->  [LIGO] GPSDateTime, GPSLatitude, GPSLongitude, GPSSpeed,
+                                  GPSTrack, GPSAltitude, MagneticVariation, Accelerometer
+ligo_ts_trailer_basic.ts      ->  nothing
+```
+
+That ExifTool parses the sibling file correctly is itself the argument for the fixture's fidelity:
+the layout is not our interpretation of the format, it is ExifTool's.
+
+### One incidental confirmation
+
+ExifTool labels the `M:` field **MagneticVariation**. An earlier version of `GPSData/README.md` in
+the sibling project called it mileage. ExifTool is right; that has been corrected.
