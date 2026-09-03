@@ -1,0 +1,15 @@
+# This repository is a byte-for-byte project: the test suites compare generated
+# output against committed golden files, and the parity gate diffs the Python and
+# JavaScript cores down to the bytes of a ZIP archive. A line-ending translation
+# anywhere in that chain is indistinguishable from a real regression.
+#
+# Git on Windows defaults to core.autocrlf=true, which rewrites every text file
+# to CRLF on checkout. That is exactly what happened: all five windows-latest
+# jobs failed with 29 mismatching goldens on a commit that changed no code.
+#
+# `-text` means: never translate, in either direction, on any platform. What is
+# committed is what lands in the working tree.
+* -text
+
+# Fixture videos are binary; say so, so Git never tries to diff or merge them.
+fixtures/bin/** binary

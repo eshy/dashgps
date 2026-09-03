@@ -120,6 +120,17 @@ jobs:
         with: { node-version: 22 }
       - run: pipx install ruff
       - run: ruff check python/ fixtures/ scripts/
+      - name: No tracked file may contain a CR
+        run: |
+          # .gitattributes says `* -text`, so nothing is translated on checkout
+          # and a CR in the working tree means a CR is committed. That would
+          # break the byte-for-byte goldens on every other platform, which is
+          # how five windows-latest jobs failed before .gitattributes existed.
+          if git grep -I -l $'\r' -- . ; then
+            echo "the files above contain carriage returns; commit them with LF endings"
+            exit 1
+          fi
+          echo "no tracked file contains a CR"
       - name: Syntax-check every JS module
         run: |
           for f in $(find js/src js/bin web -name '*.js'); do node --check "$f"; done
