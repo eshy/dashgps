@@ -13,8 +13,8 @@ jobs:
     name: fixtures are deterministic
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with: { python-version: "3.12" }
       - name: Regenerate and diff
         run: |
@@ -25,8 +25,8 @@ jobs:
     name: determinism and version guards
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with: { python-version: "3.12" }
       - run: python3 scripts/check_determinism.py --self-test
       - run: python3 scripts/check_version.py
@@ -36,10 +36,10 @@ jobs:
     name: the distributions actually build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with: { python-version: "3.12" }
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with: { node-version: 22 }
       - name: Build and validate the Python distribution
         run: |
@@ -75,8 +75,8 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-latest]
         python: ["3.9", "3.12", "3.13"]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with: { python-version: "${{ matrix.python }}" }
       - name: Run the test suite
         working-directory: python/tests
@@ -91,8 +91,8 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-latest]
         node: [20, 22]
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with: { node-version: "${{ matrix.node }}" }
       - name: Run the test suite
         working-directory: js
@@ -102,10 +102,10 @@ jobs:
     name: python and javascript agree byte-for-byte
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with: { python-version: "3.12" }
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with: { node-version: 22 }
       - run: ./scripts/parity.sh
 
@@ -113,10 +113,10 @@ jobs:
     name: lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with: { python-version: "3.12" }
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with: { node-version: 22 }
       # Pinned deliberately. An unpinned `pipx install ruff` made every build a
       # bet on that morning's release: 0.16 widened the default rule set and
@@ -144,8 +144,8 @@ jobs:
     name: web build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with: { node-version: 22 }
       - run: node scripts/build_web.mjs
       - name: The single-file build must be self-contained
