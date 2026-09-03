@@ -1,0 +1,23 @@
+# One lint configuration for the whole repository.
+#
+# This file exists because there wasn't one. The only ruff settings lived in
+# python/pyproject.toml, which ruff applies to files under python/ and nowhere
+# else -- so fixtures/ and scripts/ were being linted against whatever ruff's
+# built-in defaults happened to be on the day CI ran. CI installed ruff
+# unpinned, so when the defaults widened in 0.16 the build went red on 40
+# findings across code that had not been touched in weeks.
+#
+# Two changes stop that recurring: this file selects rules explicitly for every
+# directory, and ci.yml pins the ruff version, so a rule set can never change
+# underneath a green build. Raising either is a deliberate commit that carries
+# the fixes with it.
+#
+# There are no `ignore` entries. The previous config carried E203 and E741;
+# neither fires anywhere in this repository, and an ignore that never fires only
+# hides the moment it starts to matter.
+
+line-length = 100
+target-version = "py39"
+
+[lint]
+select = ["E", "F", "W", "I"]

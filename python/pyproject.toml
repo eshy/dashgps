@@ -31,15 +31,10 @@ Issues = "https://github.com/eshy/dashgps/issues"
 dashgps = "dashgps.cli:main"
 
 [project.optional-dependencies]
-dev = ["ruff>=0.6"]
+# Pinned to match .github/workflows/ci.yml, so a local `ruff check` and the
+# lint job apply the same rules. Raise both together, in one commit.
+dev = ["ruff==0.16.6"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/dashgps"]
 
-[tool.ruff]
-line-length = 100
-target-version = "py39"
-
-[tool.ruff.lint]
-select = ["E", "F", "W", "I"]
-ignore = ["E203", "E741"]

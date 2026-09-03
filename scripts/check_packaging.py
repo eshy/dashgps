@@ -98,7 +98,8 @@ def check_js(problems):
     def walk_exports(node, path):
         if isinstance(node, str):
             if node.startswith("./") and not os.path.exists(os.path.join(ROOT, base, node)):
-                problems.append((rel, "exports%s points at %s, which does not exist" % (path, node)))
+                problems.append((rel, "exports%s points at %s, which does not exist"
+                                 % (path, node)))
         elif isinstance(node, dict):
             for k, v in node.items():
                 walk_exports(v, path + "[%s]" % k)

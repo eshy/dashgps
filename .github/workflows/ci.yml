@@ -118,7 +118,12 @@ jobs:
         with: { python-version: "3.12" }
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
-      - run: pipx install ruff
+      # Pinned deliberately. An unpinned `pipx install ruff` made every build a
+      # bet on that morning's release: 0.16 widened the default rule set and
+      # turned the lint job red on code nobody had touched. Raise this together
+      # with the `dev` extra in python/pyproject.toml, in a commit that carries
+      # whatever fixes the new rules ask for.
+      - run: pipx install ruff==0.16.6
       - run: ruff check python/ fixtures/ scripts/
       - name: No tracked file may contain a CR
         run: |
