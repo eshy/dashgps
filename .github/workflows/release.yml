@@ -30,8 +30,8 @@ jobs:
           node-version: 22
           registry-url: https://registry.npmjs.org
       - name: npm trusted publishing needs a recent CLI
-        # setup-node ships whatever npm was bundled with the Node release; OIDC publishing needs
-        # npm >= 11.5.1, which Node 22's bundled npm predates.
+        # setup-node ships whatever npm was bundled with the Node release. OIDC publishing needs
+        # npm >= 11.5.1 and staged publishing >= 11.15.0; Node 22's bundled npm predates both.
         run: npm install -g npm@latest && npm --version
 
       - name: Tag must match VERSION
@@ -55,6 +55,11 @@ jobs:
       # No NODE_AUTH_TOKEN: npm trusted publishing authenticates with the OIDC token minted by
       # `id-token: write`. Configure the publisher at npmjs.com/package/dashgps/access.
       #
+      # This STAGES the release rather than publishing it. A staged version is not live until a
+      # maintainer approves it with 2FA, so anything that can trigger this workflow can at most
+      # queue a release for review — it cannot put code on the registry. The trusted publisher is
+      # configured to allow "npm stage publish" only, which enforces that from the other side.
+      #
       # NOTE: npm cannot publish a package's FIRST version over OIDC — a trusted publisher can
       # only be configured on a package that already exists (npm/cli#8544). Version 0.1.0 is
       # therefore published by hand, once; every release after it comes through here.
@@ -69,12 +74,15 @@ jobs:
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
           fi
-      - name: Publish to npm
+      - name: Stage the npm release for approval
         if: steps.npmcheck.outputs.skip == 'false'
         working-directory: js
-        # --provenance is documented as implicit under trusted publishing, but is still required
-        # in practice; it is harmless either way.
-        run: npm publish --provenance --access public
+        run: |
+          npm stage publish --provenance --access public
+          echo "::notice::Staged. It is NOT live until approved with 2FA:"
+          echo "::notice::  npm stage list dashgps  &&  npm stage approve <stage-id>"
+          echo "::notice::or press Approve on https://www.npmjs.com/package/dashgps/access"
+          npm stage list dashgps || true
 
       - name: Attach the fixtures so reimplementations can self-test
         run: tar czf fixtures.tar.gz fixtures/

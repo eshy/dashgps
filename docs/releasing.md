@@ -39,17 +39,28 @@ step happens last, from CI, with no long-lived credential in existence.
 
    Then at <https://www.npmjs.com/package/dashgps/access>:
    - **Trusted publisher → GitHub Actions**, with owner `eshy`, repository `dashgps`,
-     workflow `release.yml`, environment `release`, allowed action `npm publish`.
+     workflow `release.yml`, environment `release`, and allowed action **`npm stage publish`
+     only** — not `npm publish`. See "Why staged" below.
    - **Publishing access → "Require two-factor authentication and disallow tokens."** Trusted
      publishing keeps working (it uses OIDC, not a token) and this shuts the token door for good.
 
-   Every release after `0.1.0` then publishes from CI with no credential. `release.yml` skips the
-   npm step automatically if that version is already on the registry, so the `v0.1.0` tag is safe
-   to push after the manual publish.
+   Every release after `0.1.0` is then staged from CI with no credential. `release.yml` skips the
+   npm step if that version is already on the registry, so the `v0.1.0` tag is safe to push after
+   the manual publish.
 
-   Requirements the workflow already handles: npm CLI >= 11.5.1 (Node 22 bundles an older one, so
-   it upgrades first) and a `repository.url` in `package.json` that exactly matches the configured
-   publisher.
+   Requirements the workflow already handles: npm CLI >= 11.15.0 (OIDC needs 11.5.1, staging needs
+   11.15.0; Node 22 bundles an older one, so the job upgrades first) and a `repository.url` in
+   `package.json` that exactly matches the configured publisher.
+
+### Why staged
+
+`npm stage publish` submits the tarball to a staging area instead of the registry. Nothing is
+installable until a maintainer approves it with 2FA. The point is the blast radius: with plain
+`npm publish` allowed, anything able to trigger the release workflow — a bad merge, a compromised
+action, a mistaken tag — puts code straight onto the registry, where a version can never be reused
+even after being unpublished. Staged, the worst case is a queued release that a human declines.
+
+The trade is one manual step per release, described below.
 
 ## Every release
 
@@ -66,6 +77,19 @@ The tag fires `release.yml`, which runs the **entire** CI gate first — tests i
 three operating systems, the byte-for-byte parity diff, the determinism and packaging guards, and
 an actual build-and-install of both distributions checked against the golden output — and only then
 publishes. The tag must match `VERSION` or it stops.
+
+PyPI goes live at that point. **npm does not**: it is staged, and waits for you.
+
+```console
+$ npm stage list dashgps          # find the stage id
+$ npm stage view <stage-id>       # what exactly is in it
+$ npm stage download <stage-id>   # optional: inspect the tarball itself
+$ npm stage approve <stage-id>    # 2FA; this is the moment it goes live
+```
+
+or press **Approve** on <https://www.npmjs.com/package/dashgps/access>. `npm stage reject
+<stage-id>` throws it away instead — the only stage in this pipeline where a mistake is still
+recoverable, so it is worth actually looking before approving.
 
 ## Publishing by hand
 
