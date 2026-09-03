@@ -17,7 +17,7 @@ body:
         ```
         dashgps inspect --redact --hexdump YOURFILE.ts
         ```
-        Or, in the [web tool](https://dashgps.github.io/dashgps/), press **Copy diagnostics**.
+        Or, in the [web tool](https://eshy.github.io/dashgps/), press **Copy diagnostics**.
       render: text
     validations: { required: true }
   - type: input

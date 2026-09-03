@@ -3,7 +3,9 @@
 import { P_ALT, P_ANGLE, P_LATLON, P_SPEED, fixed, isoZ, xmlText } from "../fmt.js";
 
 const NS = "http://www.topografix.com/GPX/1/1";
-const EXT_NS = "https://github.com/dashgps/dashgps/ns/1";
+// A URN, not a URL: an XML namespace is an identifier and is never fetched, and this one must
+// stay stable if the project ever moves. spec/21-outputs.md
+const EXT_NS = "urn:dashgps:gpx:1";
 
 export function write(out, group, ctx) {
   const version = ctx.version || "0.0.0";

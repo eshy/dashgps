@@ -6,14 +6,15 @@ step happens last, from CI, with no long-lived credential in existence.
 
 ## Once, when the repo is created
 
-1. Create the GitHub repository and push. Nothing published references anything until this exists —
-   both READMEs, `pyproject.toml` and `package.json` point at
-   `https://github.com/dashgps/dashgps`, and those links are dead until it does.
-2. **Settings → Pages → Source: GitHub Actions.** The `pages` workflow deploys the browser tool
-   and the single-file build on every push to `main`.
+1. Create the GitHub repository and push. **Done** — <https://github.com/eshy/dashgps>.
+2. **Settings → Pages → Source: GitHub Actions.** That is the only setting; do **not** use either
+   "Configure" card on that page — they add a second, competing workflow, and this repo already
+   has `.github/workflows/pages.yml`. If Pages was switched on after the first push, that run had
+   nothing to deploy into: re-run it from **Actions → pages → Run workflow**. The site lands at
+   <https://eshy.github.io/dashgps/>.
 3. **PyPI → Publishing → Add a pending publisher** (Trusted Publishing), with:
    - PyPI project name: `dashgps`
-   - Owner / repository: your org / `dashgps`
+   - Owner / repository: `eshy` / `dashgps`
    - Workflow: `release.yml`
    - Environment: `release`
 4. **GitHub → Settings → Environments → New environment: `release`.** Add required reviewers if

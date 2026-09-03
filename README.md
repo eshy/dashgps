@@ -2,7 +2,7 @@
 
 Extract GPS tracks from dashcam video files and export them as CSV, GPX or GeoJSON.
 
-**[Try it in your browser →](https://dashgps.github.io/dashgps/)** — drop in a clip or a whole
+**[Try it in your browser →](https://eshy.github.io/dashgps/)** — drop in a clip or a whole
 trip's folder. Nothing is uploaded; parsing happens on your machine.
 
 ```
@@ -50,7 +50,7 @@ minutes, and the browser version does the same thing with `Blob.slice()`.
 - **Reverse-engineered** — derived from a real artifact, but not confirmed end to end.
 - **Untested** — built from a published sample or a public standard. **No file from such a camera
   has ever been run through it.** If you own one, please
-  [send a diagnostic](https://github.com/dashgps/dashgps/issues/new?template=new-format.yml) —
+  [send a diagnostic](https://github.com/eshy/dashgps/issues/new?template=new-format.yml) —
   `dashgps inspect --redact` produces a redacted report that is usually all we need.
 
 For anything else, the CLI can hand the file to your own ExifTool install:

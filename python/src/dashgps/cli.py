@@ -354,7 +354,7 @@ def build_parser():
     p = argparse.ArgumentParser(
         prog="dashgps",
         description="Extract GPS tracks from dashcam video files.",
-        epilog="Your video never leaves your machine. See https://github.com/dashgps/dashgps",
+        epilog="Your video never leaves your machine. See https://github.com/eshy/dashgps",
     )
     p.add_argument("--version", action="version", version="dashgps " + __version__)
     sub = p.add_subparsers(dest="cmd")

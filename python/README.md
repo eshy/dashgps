@@ -16,7 +16,7 @@ That last line is the point. For the format this was built for, the GPS log is a
 appended **after** the video stream, so dashgps seeks to the end and reads 64 KB instead of
 decoding a gigabyte. A 1,230-clip, 1.2 TB trip extracts in under three minutes.
 
-There is also a [browser version](https://dashgps.github.io/dashgps/) that does the same thing
+There is also a [browser version](https://eshy.github.io/dashgps/) that does the same thing
 client-side — your video never leaves your machine.
 
 ## Supported formats
@@ -32,7 +32,7 @@ client-side — your video never leaves your machine.
 reverse-engineered from and validated on ~1,230 clips (1.2 TB) from an **ICESKY** dashcam, and
 reproduces all 313,303 points of a known trip exactly. **Untested** means built from a published
 sample or a public standard, having never seen a file from that camera — if you own one, please
-[send a redacted diagnostic](https://github.com/dashgps/dashgps/issues/new?template=new-format.yml).
+[send a redacted diagnostic](https://github.com/eshy/dashgps/issues/new?template=new-format.yml).
 
 For anything else, hand the file to your own ExifTool install:
 
@@ -60,6 +60,6 @@ accel_x,accel_y,accel_z,dt_s,outlier,source_file
 `--tz-offset -07:00` converts to real UTC.
 
 Full documentation, byte-level format specs and the JavaScript port:
-<https://github.com/dashgps/dashgps>
+<https://github.com/eshy/dashgps>
 
 MIT licensed.

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="dashgps 0.1.0" xmlns="http://www.topografix.com/GPX/1/1" xmlns:dashgps="https://github.com/dashgps/dashgps/ns/1">
+<gpx version="1.1" creator="dashgps 0.1.0" xmlns="http://www.topografix.com/GPX/1/1" xmlns:dashgps="urn:dashgps:gpx:1">
   <metadata>
     <name>all</name>
     <time>2026-05-02T10:00:00Z</time>

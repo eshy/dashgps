@@ -41,7 +41,7 @@ ever read — a folder of 1 GB clips finishes in seconds.
 
 **Untested** means built from a published sample or a public standard, having never seen a file
 from that camera. If you own one, please
-[send a redacted diagnostic](https://github.com/dashgps/dashgps/issues/new?template=new-format.yml).
+[send a redacted diagnostic](https://github.com/eshy/dashgps/issues/new?template=new-format.yml).
 
 ## Output parity
 
@@ -49,6 +49,6 @@ This package and the Python one are file-for-file mirrors, and CI diffs their ou
 fixture set — including ZIP bytes. Neither may use a built-in number, date or JSON formatter,
 because those differ between the languages.
 
-Full documentation and byte-level format specs: <https://github.com/dashgps/dashgps>
+Full documentation and byte-level format specs: <https://github.com/eshy/dashgps>
 
 MIT licensed.

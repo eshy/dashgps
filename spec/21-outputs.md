@@ -25,7 +25,10 @@ One `<trk>` per group, one `<trkseg>` per non-glitch run — so a consumer that 
 the gaps right for free. Glitch runs are emitted only with `--include-glitch`, as a separate
 `<trk>` suffixed ` (glitch)`.
 
-Fixed attribute order, 2-space indent, `creator="dashgps <VERSION>"`. `<time>` is `iso_z`; an XML
+Fixed attribute order, 2-space indent, `creator="dashgps <VERSION>"`. The extension namespace is
+`urn:dashgps:gpx:1` — a URN rather than a URL, because an XML namespace is an identifier that is
+never fetched, and consumers may key on it indefinitely. Tying it to a repository URL would churn
+the day the project moves owner. `<time>` is `iso_z`; an XML
 comment records that the value is naive camera time when it is. Speed, heading and the
 accelerometer ride in a `<extensions>` block under the `dashgps` namespace.
 

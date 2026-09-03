@@ -8,7 +8,7 @@ A **diagnostic** from a camera we do not support:
 $ dashgps inspect --redact --hexdump YOURFILE.ts
 ```
 
-Paste that into a [new-format issue](https://github.com/dashgps/dashgps/issues/new?template=new-format.yml).
+Paste that into a [new-format issue](https://github.com/eshy/dashgps/issues/new?template=new-format.yml).
 It is usually enough to identify the format.
 
 **Please do not attach a raw dashcam file.** Its coordinates include wherever you drove, which for
@@ -27,12 +27,18 @@ essentially no video. We will tell you exactly which bytes we need, and you can 
 No dependencies, no build step.
 
 ```console
-$ git clone https://github.com/dashgps/dashgps && cd dashgps
+$ git clone https://github.com/eshy/dashgps && cd dashgps
+$ ./scripts/check_all.sh                      # everything CI runs that needs no network
+$ node scripts/build_web.mjs && python3 -m http.server -d web/dist
+```
+
+Individually, if you want to run one gate at a time:
+
+```console
 $ python3 fixtures/build_fixtures.py          # regenerate the synthetic fixtures
 $ cd python/tests && python -m unittest discover -s .
 $ cd js && node --test test/*.test.js
 $ ./scripts/parity.sh                         # both cores, byte-for-byte
-$ node scripts/build_web.mjs && python3 -m http.server -d web/dist
 ```
 
 ## Adding a format

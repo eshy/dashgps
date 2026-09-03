@@ -7,7 +7,9 @@ without having to know about dt_s.
 from ..fmt import P_ALT, P_ANGLE, P_LATLON, P_SPEED, fixed, iso_z, xml_text
 
 NS = "http://www.topografix.com/GPX/1/1"
-EXT_NS = "https://github.com/dashgps/dashgps/ns/1"
+# A URN, not a URL: an XML namespace is an identifier and is never fetched, and this one must
+# stay stable if the project ever moves. spec/21-outputs.md
+EXT_NS = "urn:dashgps:gpx:1"
 
 
 def write(out, group, ctx):

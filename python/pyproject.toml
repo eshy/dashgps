@@ -23,9 +23,9 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/dashgps/dashgps"
-Documentation = "https://github.com/dashgps/dashgps/tree/main/spec"
-Issues = "https://github.com/dashgps/dashgps/issues"
+Homepage = "https://github.com/eshy/dashgps"
+Documentation = "https://github.com/eshy/dashgps/tree/main/spec"
+Issues = "https://github.com/eshy/dashgps/issues"
 
 [project.scripts]
 dashgps = "dashgps.cli:main"
