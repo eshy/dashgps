@@ -132,6 +132,11 @@ $ cd js && node --test test/*.test.js                                    # 106 t
 $ ./scripts/parity.sh                                                    # byte-for-byte
 ```
 
+## Releasing
+
+[`docs/releasing.md`](docs/releasing.md). Publishing goes through a tagged release that runs the
+full gate first, using PyPI Trusted Publishing so no long-lived token exists.
+
 ## Licence
 
 MIT. See [`LICENSE`](LICENSE) and [`NOTICE.md`](NOTICE.md) for how each format was derived.

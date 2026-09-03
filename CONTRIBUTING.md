@@ -80,6 +80,13 @@ Do not promote a format because the code looks right. `verified` is a claim abou
 - **The two trees mirror each other**, module for module and function for function. A reviewer
   should be able to read them side by side.
 
+## Releasing
+
+See [`docs/releasing.md`](docs/releasing.md). Short version: bump `VERSION` and the four places
+that mirror it, tag, push. The tag runs the whole CI gate — both test suites on three operating
+systems, the parity diff, and a real build-and-install of both packages checked against the golden
+output — and only publishes if all of it is green.
+
 ## Provenance
 
 dashgps is MIT licensed and intends to stay that way. Most prior art in this space is GPL or

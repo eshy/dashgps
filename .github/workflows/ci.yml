@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
   pull_request:
+  # release.yml runs this whole gate before publishing anything.
+  workflow_call:
 permissions:
   contents: read
 
@@ -28,6 +30,41 @@ jobs:
         with: { python-version: "3.12" }
       - run: python3 scripts/check_determinism.py --self-test
       - run: python3 scripts/check_version.py
+      - run: python3 scripts/check_packaging.py --self-test
+
+  package:
+    name: the distributions actually build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Build and validate the Python distribution
+        run: |
+          python -m pip install --upgrade build twine
+          python -m build python/ --outdir dist/
+          twine check --strict dist/*
+      - name: Install the wheel and run the console script
+        run: |
+          python -m venv /tmp/venv
+          /tmp/venv/bin/pip install dist/*.whl
+          /tmp/venv/bin/dashgps --version
+          /tmp/venv/bin/dashgps formats
+          /tmp/venv/bin/dashgps fixtures/bin/ligo_ts_trailer_basic.ts -o /tmp/pkgout --group none -q
+          diff /tmp/pkgout/all.csv fixtures/golden/ligo_ts_trailer_basic/all.csv
+          echo "the installed package reproduces the golden output"
+      - name: Pack the npm tarball and run its bin
+        working-directory: js
+        run: |
+          npm pack --dry-run
+          npm pack
+          npm install -g ./dashgps-*.tgz
+          dashgps --version
+          cd .. && dashgps fixtures/bin/ligo_ts_trailer_basic.ts -o /tmp/npmout --group none -q
+          diff /tmp/npmout/all.csv fixtures/golden/ligo_ts_trailer_basic/all.csv
+          echo "the installed npm package reproduces the golden output"
 
   python:
     name: python ${{ matrix.python }} on ${{ matrix.os }}
