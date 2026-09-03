@@ -96,7 +96,13 @@ jobs:
         with: { node-version: "${{ matrix.node }}" }
       - name: Run the test suite
         working-directory: js
-        run: node --test test/*.test.js
+        # No glob. PowerShell is the default shell on windows-latest and does not
+        # expand one for a native command, so Node received the literal string
+        # `test/*.test.js`. Node 22 globs test paths itself and shrugged it off;
+        # Node 20 does not, which is why exactly one job in the matrix failed.
+        # With no path at all the runner discovers the files itself, on every
+        # shell and every supported Node.
+        run: node --test
 
   parity:
     name: python and javascript agree byte-for-byte

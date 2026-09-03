@@ -128,7 +128,7 @@ status column above exists, and why we want your diagnostics.
 ```console
 $ python3 fixtures/build_fixtures.py && git diff --exit-code fixtures/   # deterministic
 $ cd python/tests && python -m unittest discover -s .                    # 109 tests
-$ cd js && node --test test/*.test.js                                    # 106 tests
+$ cd js && node --test                                                   # 106 tests
 $ ./scripts/parity.sh                                                    # byte-for-byte
 ```
 

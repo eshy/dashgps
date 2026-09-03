@@ -37,7 +37,7 @@ Individually, if you want to run one gate at a time:
 ```console
 $ python3 fixtures/build_fixtures.py          # regenerate the synthetic fixtures
 $ cd python/tests && python -m unittest discover -s .
-$ cd js && node --test test/*.test.js
+$ cd js && node --test
 $ ./scripts/parity.sh                         # both cores, byte-for-byte
 ```
 

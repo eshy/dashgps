@@ -28,7 +28,7 @@ step "python tests"
 (cd python/tests && python3 -m unittest discover -s . 2>&1 | tail -3)
 
 step "javascript tests"
-(cd js && node --test test/*.test.js 2>&1 | grep -E '^# (tests|pass|fail)')
+(cd js && node --test 2>&1 | grep -E '^# (tests|pass|fail)')
 
 step "output parity"
 ./scripts/parity.sh | tail -1

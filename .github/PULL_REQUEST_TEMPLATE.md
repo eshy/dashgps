@@ -9,7 +9,7 @@
       because you read GPL source, please open an issue describing the *behaviour* instead.)
 - [ ] `python3 scripts/check_determinism.py --self-test` passes.
 - [ ] Both suites pass: `cd python/tests && python -m unittest discover -s .` and
-      `cd js && node --test test/*.test.js`.
+      `cd js && node --test`.
 - [ ] `./scripts/parity.sh` passes.
 
 ## If this adds or changes a format
