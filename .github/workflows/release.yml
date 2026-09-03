@@ -29,6 +29,10 @@ jobs:
         with:
           node-version: 22
           registry-url: https://registry.npmjs.org
+      - name: npm trusted publishing needs a recent CLI
+        # setup-node ships whatever npm was bundled with the Node release; OIDC publishing needs
+        # npm >= 11.5.1, which Node 22's bundled npm predates.
+        run: npm install -g npm@latest && npm --version
 
       - name: Tag must match VERSION
         run: |
@@ -45,12 +49,32 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           packages-dir: dist/
+          # Re-running a release must not hard-fail on a version that already went out.
+          skip-existing: true
 
-      - name: Publish to npm
+      # No NODE_AUTH_TOKEN: npm trusted publishing authenticates with the OIDC token minted by
+      # `id-token: write`. Configure the publisher at npmjs.com/package/dashgps/access.
+      #
+      # NOTE: npm cannot publish a package's FIRST version over OIDC — a trusted publisher can
+      # only be configured on a package that already exists (npm/cli#8544). Version 0.1.0 is
+      # therefore published by hand, once; every release after it comes through here.
+      - name: Has this version already been published to npm?
+        id: npmcheck
         working-directory: js
+        run: |
+          v=$(node -p "require('./package.json').version")
+          if npm view "dashgps@$v" version >/dev/null 2>&1; then
+            echo "npm already has dashgps@$v; skipping"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Publish to npm
+        if: steps.npmcheck.outputs.skip == 'false'
+        working-directory: js
+        # --provenance is documented as implicit under trusted publishing, but is still required
+        # in practice; it is harmless either way.
         run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Attach the fixtures so reimplementations can self-test
         run: tar czf fixtures.tar.gz fixtures/

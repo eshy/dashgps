@@ -19,8 +19,30 @@ step happens last, from CI, with no long-lived credential in existence.
    - Environment: `release`
 4. **GitHub → Settings → Environments → New environment: `release`.** Add required reviewers if
    you want a human approval in front of every publish.
-5. npm has no equivalent of Trusted Publishing for this flow, so it needs a token: create an
-   **automation** token scoped to the package and add it as the `NPM_TOKEN` repository secret.
+5. **npm.** npm has trusted publishing too, but with one catch PyPI does not have: a trusted
+   publisher can only be configured on a package that **already exists**, so the very first
+   version cannot go out over OIDC ([npm/cli#8544](https://github.com/npm/cli/issues/8544)).
+
+   Publish `0.1.0` once, by hand, from your own machine — no token needs to exist at all:
+
+   ```console
+   $ npm login                 # interactive, uses your 2FA
+   $ cd js && npm publish --provenance --access public
+   ```
+
+   Then at <https://www.npmjs.com/package/dashgps/access>:
+   - **Trusted publisher → GitHub Actions**, with owner `eshy`, repository `dashgps`,
+     workflow `release.yml`, environment `release`, allowed action `npm publish`.
+   - **Publishing access → "Require two-factor authentication and disallow tokens."** Trusted
+     publishing keeps working (it uses OIDC, not a token) and this shuts the token door for good.
+
+   Every release after `0.1.0` then publishes from CI with no credential. `release.yml` skips the
+   npm step automatically if that version is already on the registry, so the `v0.1.0` tag is safe
+   to push after the manual publish.
+
+   Requirements the workflow already handles: npm CLI >= 11.5.1 (Node 22 bundles an older one, so
+   it upgrades first) and a `repository.url` in `package.json` that exactly matches the configured
+   publisher.
 
 ## Every release
 
@@ -51,12 +73,15 @@ $ twine upload dist/*
 ```
 
 Prefer a short-lived, project-scoped API token, and revoke it immediately afterwards. A token that
-can publish `dashgps` can publish anything under that account unless it is scoped.
+can publish `dashgps` can publish anything under that account unless it is scoped. For npm, prefer
+`npm login` over a token entirely — it is interactive, uses your 2FA, and leaves nothing behind.
 
 ## Before the first release
 
-- [ ] The GitHub repository exists and the README links resolve.
-- [ ] `dashgps` is still free on PyPI and npm.
+- [ ] The GitHub repository exists and the README links resolve. **Done** — `eshy/dashgps`.
+- [ ] `dashgps` is still free on PyPI and npm. **Checked 2026-09-03**: PyPI 404, npm registry 404.
+- [ ] PyPI pending publisher configured; GitHub `release` environment created.
+- [ ] npm `0.1.0` published by hand, then its trusted publisher configured.
 - [ ] Someone has run the tool against real footage from a camera we do not own, or the README's
       status column is the only thing standing between a user and a wrong track. It already is —
       keep it honest.
